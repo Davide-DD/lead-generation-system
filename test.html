@@ -10,11 +10,11 @@
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
       crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -33,115 +33,127 @@
         <!-- Form Name -->
         <legend>Golden Elbow</legend>
 
+        <h3 class="text-center mb-3">Scegli il servizio</h3>
+
         <!-- Multiple Radios (inline) -->
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-md-offset-2 text-center">
-            <div class="thumbnail">
-              <div class="caption service bg-primary">
-                <h3>Servizio 1</h3>
-                <p>...</p>
-              </div>
+        <div class="card-deck">
+          <div class="col-md-3 offset-md-3">
+          <div class="card text-white bg-primary service" id="service1">
+            <div class="card-body">
+              <h5 class="card-title">Servizio 1</h5>
+              <p class="card-text">Descrizione del servizio 1</p>
+            </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 text-center">
-            <div class="thumbnail">
-              <div class="caption service bg-danger">
-                <h3>Servizio 2</h3>
-                <p>...</p>
-              </div>
+          <div class="col-md-3">
+          <div class="card text-white bg-danger service" id="service2">
+            <div class="card-body">
+              <h5 class="card-title">Servizio 1</h5>
+              <p class="card-text">Descrizione del servizio 1</p>
             </div>
           </div>
-        </div>
+          </div>
         </div>
 
+        <h3 class="text-center mt-4 mb-3">Seleziona i servizi aggiuntivi</h3>
+
         <!-- Multiple Checkboxes -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Multiple Checkboxes</label>
-          <div class="col-md-4">
+        <div class="form-group text-center">
+          <div class="col-md-12">
             <div class="checkbox">
               <label for="checkboxes-0">
                 <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-                Option one
+                Servizio aggiuntivo 1
               </label>
             </div>
             <div class="checkbox">
               <label for="checkboxes-1">
                 <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                Option two
+                Servizio aggiuntivo 2
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-2">
+                <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                Servizio aggiuntivo 3
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-3">
+                <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                Servizio aggiuntivo 4
               </label>
             </div>
           </div>
         </div>
 
+        <h3 class="text-center mt-4 mb-3">Per quanto tempo vuoi usare il servizio?</h3>
+
         <!-- Multiple Radios (inline) -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="radios">Inline Radios</label>
-          <div class="col-md-4">
-            <label class="radio-inline" for="radios-0">
+        <div class="form-group text-center">
+          <div class="col-md-12">
+            <label class="radio-inline mr-3" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-              1
+              3 mesi
             </label>
-            <label class="radio-inline" for="radios-1">
+            <label class="radio-inline mr-3" for="radios-1">
               <input type="radio" name="radios" id="radios-1" value="2">
-              2
+              6 mesi
             </label>
-            <label class="radio-inline" for="radios-2">
+            <label class="radio-inline mr-3" for="radios-2">
               <input type="radio" name="radios" id="radios-2" value="3">
-              3
-            </label>
-            <label class="radio-inline" for="radios-3">
-              <input type="radio" name="radios" id="radios-3" value="4">
-              4
+              12 mesi
             </label>
           </div>
         </div>
 
+        <h3 class="text-center mt-4 mb-3">Inserisci i tuoi dati</h3>
+
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Text Input</label>
-          <div class="col-md-4">
-            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-            <span class="help-block">help</span>
+          <label class="col-md-4 offset-md-4 control-label" for="textinput">Nome</label>
+          <div class="col-md-4 text-center offset-md-4">
+            <input id="textinput" name="textinput" type="text" class="form-control input-md">
           </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Text Input</label>
-          <div class="col-md-4">
-            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-            <span class="help-block">help</span>
+          <label class="col-md-4 offset-md-4 control-label" for="textinput">Cognome</label>
+          <div class="col-md-4 offset-md-4">
+            <input id="textinput" name="textinput" type="text" class="form-control input-md">
           </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput">Text Input</label>
-          <div class="col-md-4">
-            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-            <span class="help-block">help</span>
+          <label class="col-md-4 offset-md-4 control-label" for="textinput">E-mail</label>
+          <div class="col-md-4 offset-md-4">
+            <input id="textinput" name="textinput" type="text" class="form-control input-md">
           </div>
         </div>
 
         <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
-          <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+        <div class="form-group text-center">
+          <div class="col-md-12">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Conferma</button>
           </div>
-        </div>
 
       </fieldset>
     </form>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="logic.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"></script>
 
   </body>
 

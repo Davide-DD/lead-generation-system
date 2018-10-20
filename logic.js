@@ -1,24 +1,21 @@
-var oldSelected = null
-var oldColor = null
+var serviceSelected = null
+var serviceSelectedOldColor = null
 
 function switchColor(selected) {
     if (selected.hasClass("bg-primary")) {
         selected.removeClass("bg-primary").addClass("bg-success")
-        oldColor = "bg-primary"
+        serviceSelectedOldColor = "bg-primary"
     }
     else {
         selected.removeClass("bg-danger").addClass("bg-success")
-        oldColor = "bg-danger"
+        serviceSelectedOldColor = "bg-danger"
     }
-    console.log(selected)
 }
 
-$(document).ready(function(){
-    $(".service").each(function(i){
-        $(this).on("click", function(event){
-            if (oldSelected !== null) oldSelected.removeClass("bg-success").addClass(oldColor)
-            switchColor($(this))
-            oldSelected = $(this)
-        });
+$(".service").on("click", function (event) {
+    serviceSelected = $(this)
+    $(".service").each(function (i) {
+        if (serviceSelected.is($(this))) $(this).removeClass("bg-success").addClass("bg-secondary")
+        else serviceSelected.removeClass("bg-secondary").addClass("bg-success")
     });
 });
