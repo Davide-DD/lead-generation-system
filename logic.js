@@ -1,6 +1,5 @@
-var serviceSelected = null
+var serviceSelectedId = null
 var hasFirstSelected = false
-var serviceSelectedOldColor = null
 
 function findBg(element) {
     var classList = element.attr('class').split(/\s+/);
@@ -14,9 +13,9 @@ function findBg(element) {
 }
 
 $(".service").on("click", function (event) {
-    serviceSelected = $(this).attr('id')
+    serviceSelectedId = $(this).attr('id')
     $(".service").each(function (i) {
-        if (serviceSelected !== $(this).attr('id')) {
+        if (serviceSelectedId !== $(this).attr('id')) {
             if (!hasFirstSelected) {
                 var classToRemove = findBg($(this))
                 $(this).removeClass(findBg($(this))).addClass("bg-secondary")
@@ -36,4 +35,26 @@ $(".service").on("click", function (event) {
         }
     });
     hasFirstSelected = true
+});
+
+$( "#confirm" ).click(function(event) {
+    event.preventDefault()
+    
+    // Trovo il servizio selezionato
+    var serviceSelected = $('#' + serviceSelectedId)
+    console.log(serviceSelected)
+
+    // Trovo i servizi aggiuntivi spuntati
+    var checkboxesSelected = $('input[name="checkboxes"]:checked')
+    console.log(checkboxesSelected)
+
+    // Trovo per quanto tempo sono richiesti i servizi
+    var radioSelected = $('input[name="radios"]:checked')[0]
+    console.log(radioSelected)
+
+    // Trovo i campi di nome, cognome e e-mail
+    var name = $("#name").val()
+    var surname = $("#surname").val()
+    var email = $("#email").val()
+    console.log(name + "," + surname + "," + email)
 });
