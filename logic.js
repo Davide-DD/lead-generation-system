@@ -1,8 +1,9 @@
-var states = ["chooseService", "extraServices", "timeOfService", "data"]
-var currentState = "chooseService"
-var serviceSelectedId = null
-var hasFirstSelected = false
-
+/**
+ * 
+ * Parte di logica che gestisce il submit del form (validazione, salvataggio dati utente, invio preventivo in pdf)
+ * TODO: salvataggio dati utente, invio preventivo in pdf
+ * 
+ */
 $(document).ready(function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     $('.needs-validation').submit(function (event) {
@@ -11,6 +12,12 @@ $(document).ready(function () {
             event.stopPropagation();
         }
         else {
+            /*
+            TODO: da cancellare una volta scritta questa parte di logica e sotituire alla fine con un redirect verso la pagina che vuole albo
+            event.preventDefault();
+            event.stopPropagation();
+            */
+
             // Trovo il servizio selezionato
             var serviceSelected = $('#' + serviceSelectedId)
             console.log(serviceSelected)
@@ -32,6 +39,15 @@ $(document).ready(function () {
         $(this)[0].classList.add('was-validated');
     })
 });
+
+
+/**
+ * 
+ * Parte di logica che gestisce il cambio di colori quando un servizio è selezionato (nella prima slide)
+ * 
+ */
+var serviceSelectedId = null
+var hasFirstSelected = false
 
 function findBg(element) {
     var classList = element.attr('class').split(/\s+/);
@@ -58,6 +74,15 @@ $(".service").on("click", function (event) {
     });
     hasFirstSelected = true
 });
+
+
+/**
+ * 
+ * Parte di logica che gestisce lo scorrimento del form
+ * 
+ */
+var states = ["chooseService", "extraServices", "timeOfService", "data"]
+var currentState = "chooseService"
 
 function goToNextState(command) {
     // Trova lo stato futuro della presentazione
