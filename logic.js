@@ -1,3 +1,5 @@
+var states = ["chooseService", "extraServices", "timeOfService", "data"]
+var currentState = "chooseService"
 var serviceSelectedId = null
 var hasFirstSelected = false
 
@@ -56,3 +58,39 @@ $(".service").on("click", function (event) {
     });
     hasFirstSelected = true
 });
+
+function goToNextState(command) {
+    // Trova lo stato futuro della presentazione
+    var currentIndex = states.indexOf(currentState)
+    var nextIndex
+    if (command === "previous") {
+        if (currentIndex === 0) nextIndex = 0
+        else nextIndex = currentIndex - 1
+    } 
+    else {
+        if (currentIndex === states.length - 1) nextIndex = states.length - 1
+        else nextIndex = currentIndex + 1
+    }
+    
+    // Gestisce l'abilitazione o la disabilitazione dei pulsanti
+    if (nextIndex === states.length - 1) $("#next").prop("disabled", true)
+    else if (nextIndex === 0) $("#previous").prop("disabled", true)
+    else {
+        $("#previous").prop("disabled", false)
+        $("#next").prop("disabled", false)
+    }
+
+    // Gestisce la visualizzazione della presentazione
+    if (currentIndex === nextIndex) return
+    else currentState = states[nextIndex]
+    $(".state").slideUp()
+    $("#" + currentState).slideDown()
+}
+
+$("#previous").click(function () {
+    goToNextState("previous")
+})
+
+$("#next").click(function () {
+    goToNextState("next")
+})

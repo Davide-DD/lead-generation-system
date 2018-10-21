@@ -12,6 +12,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +30,7 @@
         <!-- Form Name -->
         <legend>Golden Elbow</legend>
 
+        <div id="chooseService" class="state">
         <h3 class="text-center mb-3">Scegli il servizio</h3>
 
         <!-- Multiple Radios (inline) -->
@@ -50,102 +52,127 @@
             </div>
           </div>
         </div>
+        </div>
+        
+        <div id="extraServices"class="state" style="display:none">
+          <h3 class="text-center mt-4 mb-3">Seleziona i servizi aggiuntivi</h3>
 
-        <h3 class="text-center mt-4 mb-3">Seleziona i servizi aggiuntivi</h3>
+          <!-- Multiple Checkboxes -->
+          <div class="form-group text-center">
+            <div class="col-md-12">
+              <div class="checkbox">
+                <label for="checkboxes-0">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                  Servizio aggiuntivo 1
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-1">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                  Servizio aggiuntivo 2
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-2">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                  Servizio aggiuntivo 3
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-3">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                  Servizio aggiuntivo 4
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Multiple Checkboxes -->
-        <div class="form-group text-center">
-          <div class="col-md-12">
-            <div class="checkbox">
-              <label for="checkboxes-0">
-                <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-                Servizio aggiuntivo 1
+        <div id="timeOfService"class="state" style="display:none">
+          <h3 class="text-center mt-4 mb-3">Per quanto tempo vuoi usare il servizio?</h3>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group text-center">
+            <div class="col-md-12">
+              <label class="radio-inline mr-3" for="radios-0">
+                <input type="radio" name="radios" id="radios-0" value="1">
+                3 mesi
+              </label>
+              <label class="radio-inline mr-3" for="radios-1">
+                <input type="radio" name="radios" id="radios-1" value="2">
+                6 mesi
+              </label>
+              <label class="radio-inline mr-3" for="radios-2">
+                <input type="radio" name="radios" id="radios-2" value="3">
+                12 mesi
               </label>
             </div>
-            <div class="checkbox">
-              <label for="checkboxes-1">
-                <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-                Servizio aggiuntivo 2
-              </label>
-            </div>
-            <div class="checkbox">
-              <label for="checkboxes-2">
-                <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
-                Servizio aggiuntivo 3
-              </label>
-            </div>
-            <div class="checkbox">
-              <label for="checkboxes-3">
-                <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
-                Servizio aggiuntivo 4
-              </label>
-            </div>
           </div>
         </div>
 
-        <h3 class="text-center mt-4 mb-3">Per quanto tempo vuoi usare il servizio?</h3>
+        <div id="data"class="state" style="display:none">
+          <h3 class="text-center mt-4 mb-3">Inserisci i tuoi dati</h3>
 
-        <!-- Multiple Radios (inline) -->
-        <div class="form-group text-center">
-          <div class="col-md-12">
-            <label class="radio-inline mr-3" for="radios-0">
-              <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-              3 mesi
-            </label>
-            <label class="radio-inline mr-3" for="radios-1">
-              <input type="radio" name="radios" id="radios-1" value="2">
-              6 mesi
-            </label>
-            <label class="radio-inline mr-3" for="radios-2">
-              <input type="radio" name="radios" id="radios-2" value="3">
-              12 mesi
-            </label>
-          </div>
-        </div>
-
-        <h3 class="text-center mt-4 mb-3">Inserisci i tuoi dati</h3>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 offset-md-4 control-label" for="textinput">Nome</label>
-          <div class="col-md-4 offset-md-4">
-            <input id="name" name="textinput" type="text" class="form-control input-md" required>
-            <div class="invalid-feedback">
-              Inserisci il tuo nome
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 offset-md-4 control-label" for="textinput">Nome</label>
+            <div class="col-md-4 offset-md-4">
+              <input id="name" name="textinput" type="text" class="form-control input-md" required>
+              <div class="invalid-feedback">
+                Inserisci il tuo nome
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 offset-md-4 control-label" for="textinput">Cognome</label>
-          <div class="col-md-4 offset-md-4">
-            <input id="surname" name="textinput" type="text" class="form-control input-md" required>
-            <div class="invalid-feedback">
-              Inserisci il tuo cognome
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 offset-md-4 control-label" for="textinput">Cognome</label>
+            <div class="col-md-4 offset-md-4">
+              <input id="surname" name="textinput" type="text" class="form-control input-md" required>
+              <div class="invalid-feedback">
+                Inserisci il tuo cognome
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 offset-md-4 control-label" for="textinput">E-mail</label>
-          <div class="col-md-4 offset-md-4">
-            <input id="email" name="textinput" type="email" class="form-control input-md" required>
-            <div class="invalid-feedback">
-              Inserisci un indirizzo e-mail valido
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 offset-md-4 control-label" for="textinput">E-mail</label>
+            <div class="col-md-4 offset-md-4">
+              <input id="email" name="textinput" type="email" class="form-control input-md" required>
+              <div class="invalid-feedback">
+                Inserisci un indirizzo e-mail valido
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Button -->
-        <div class="form-group text-center">
-          <div class="col-md-12">
-            <button class="btn btn-primary" type="submit">Conferma</button>
+          <!-- Button -->
+          <div class="form-group text-center mt-4">
+            <div class="col-md-12">
+              <button class="btn btn-primary" type="submit">Conferma</button>
+            </div>
+
           </div>
 
       </fieldset>
     </form>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-2 offset-md-4 text-center">
+          <button id="previous" type="button" class="btn btn-info" disabled>
+            <i class="fa fa-chevron-left"></i>
+            Indietro
+          </button>
+        </div>
+        <div class="col-md-2 text-center">
+          <button id="next" type="button" class="btn btn-info">
+            <i class="fa fa-chevron-right"></i>
+            Avanti
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
