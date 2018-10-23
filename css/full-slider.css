@@ -6,13 +6,15 @@
 
 .carousel-item {
   height: 100vh;
-  min-height: 300px;
+  min-height: 500px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ 
 }
+
 
 .carousel-indicators li {
     border-radius: 12px;
