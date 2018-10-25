@@ -29,20 +29,20 @@
         </ol>
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080/000000')">
+          <div class="carousel-item active state" id="chooseService" style="background-image: url('http://placehold.it/1900x1080/000000')">
 
             <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
 			
              <div class="card-deck mx-auto" >
 			 <h3 class="col-sm-12">Scegli il tuo piano</h3>
 			 <h3 class="col-sm-12">...</h3>
-                <div class="card bg-primary mx-auto" style="width: 15rem; max-width: 18rem">
+                <div class="card mx-auto bg-primary service" style="width: 15rem; max-width: 18rem" id="service1">
                   <div class="card-body text-center">
                     <p class="card-text">Contiene questo questo e questo</p>
                   </div>
                   <div class="card-footer">BASIC</div>
                 </div>
-                <div class="card bg-warning mx-auto" style="width: 15rem; max-width: 18rem">
+                <div class="card mx-auto bg-danger service" style="width: 15rem; max-width: 18rem" id="service2">
                   <div class="card-body text-center">
                     <p class="card-text">Contiene questo questo e questo</p>
                   </div>
@@ -53,25 +53,113 @@
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080/000000')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Scegli i servizi aggiuntivi</h3>
-              <p>This is a description for the second slide.</p>
+          <div class="carousel-item state" id="extraServices" style="background-image: url('http://placehold.it/1900x1080/000000')">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+              
+			  <!-- Multiple Checkboxes -->
+          <div class="form-group text-center">
+			<h3 class="col-sm-12">Scegli i servizi aggiuntivi</h3>
+            <h3 class="col-sm-12">...</h3>
+            <div class="col-md-12">
+              <div class="checkbox">
+                <label for="checkboxes-0">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                  Servizio aggiuntivo 1
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-1">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                  Servizio aggiuntivo 2
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-2">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                  Servizio aggiuntivo 3
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="checkboxes-3">
+                  <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                  Servizio aggiuntivo 4
+                </label>
+              </div>
+            </div>
+          </div>
             </div>
 			
           </div>
 
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080/000000')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Scegli la durata del piano</h3>
-              <p>This is a description for the third slide.</p>
+          <div class="carousel-item state" id="timeOfService" style="background-image: url('http://placehold.it/1900x1080/000000')">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+              
+			  <div class="form-group text-center">
+			  <h3 class="col-sm-12">Scegli la durata del piano</h3>
+              <h3 class="col-sm-12">...</h3>
+				<div class="col-md-12">
+				  <label class="radio-inline mr-3" for="radios-0">
+					<input type="radio" name="radios" id="radios-0" value="1">
+					3 mesi
+				  </label>
+				  <label class="radio-inline mr-3" for="radios-1">
+					<input type="radio" name="radios" id="radios-1" value="2">
+					6 mesi
+				  </label>
+				  <label class="radio-inline mr-3" for="radios-2">
+					<input type="radio" name="radios" id="radios-2" value="3">
+					12 mesi
+				  </label>
+				</div>
+			  </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080/000000')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Dati</h3>
-              <p>This is a description for the fourth slide.</p>
+          <div class="carousel-item state" id="data" style="background-image: url('http://placehold.it/1900x1080/000000')">
+            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+
+				<!-- Text input-->
+			  <div class="form-group">
+				  <h3 class="col-sm-12">Dati</h3>
+				  <h3 class="col-sm-12">...</h3>
+				<label class="col-md-4 offset-md-4 control-label" for="textinput">Nome</label>
+				<div class="col-md-4 offset-md-4">
+				  <input id="name" name="textinput" type="text" class="form-control input-md" required>
+				  <div class="invalid-feedback">
+					Inserisci il tuo nome
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Text input-->
+			  <div class="form-group">
+				<label class="col-md-4 offset-md-4 control-label" for="textinput">Cognome</label>
+				<div class="col-md-4 offset-md-4">
+				  <input id="surname" name="textinput" type="text" class="form-control input-md" required>
+				  <div class="invalid-feedback">
+					Inserisci il tuo cognome
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Text input-->
+			  <div class="form-group">
+				<label class="col-md-4 offset-md-4 control-label" for="textinput">E-mail</label>
+				<div class="col-md-4 offset-md-4">
+				  <input id="email" name="textinput" type="email" class="form-control input-md" required>
+				  <div class="invalid-feedback">
+					Inserisci un indirizzo e-mail valido
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Button -->
+			  <div class="form-group text-center mt-4">
+				<div class="col-md-12">
+				  <button class="btn btn-primary" type="submit">Conferma</button>
+				</div>
+
+			  </div>
             </div>
           </div>
 
@@ -93,7 +181,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+	
+	<script src="logic.js"></script>
   </body>
 
 </html>
