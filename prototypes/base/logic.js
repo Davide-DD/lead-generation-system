@@ -35,6 +35,18 @@ $(document).ready(function () {
             var surname = $("#surname").val()
             var email = $("#email").val()
             console.log(name + "," + surname + "," + email)
+
+            // Invoco il file addClient.php server-side che aggiunge il cliente al file .csv
+            var separator = ","
+            var clientInfos = name + separator + surname + separator + email
+            $.ajax({
+                method: "POST",
+                url: "addClient.php",
+                data: { row: clientInfos }
+            })
+                .done(function (msg) {
+                    alert("Data Saved: " + msg);
+                });
         }
         $(this)[0].classList.add('was-validated');
     })
@@ -91,12 +103,12 @@ function goToNextState(command) {
     if (command === "previous") {
         if (currentIndex === 0) nextIndex = 0
         else nextIndex = currentIndex - 1
-    } 
+    }
     else {
         if (currentIndex === states.length - 1) nextIndex = states.length - 1
         else nextIndex = currentIndex + 1
     }
-    
+
     // Gestisce l'abilitazione o la disabilitazione dei pulsanti
     if (nextIndex === states.length - 1) $("#next").prop("disabled", true)
     else if (nextIndex === 0) $("#previous").prop("disabled", true)
