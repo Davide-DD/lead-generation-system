@@ -1,39 +1,48 @@
 $(document).ready(function () {
-    $("#confirm").click(function(event) {
-        // Trovo il servizio selezionato
-        var serviceSelected = $('#' + serviceSelectedId)
-        console.log(serviceSelected)
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    $('.needs-validation').submit(function (event) {
+        if ($(this)[0].checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        else {
+            event.preventDefault();
+            event.stopPropagation();
 
-        // Trovo i servizi aggiuntivi spuntati
-        var checkboxesSelected = $('input[name="checkboxes"]:checked')
-        console.log(checkboxesSelected)
+            // Trovo il servizio selezionato
+            var serviceSelected = $('#' + serviceSelectedId)
+            console.log(serviceSelected)
 
-        // Trovo per quanto tempo sono richiesti i servizi
-        var radioSelected = $('input[name="radios"]:checked')[0]
-        console.log(radioSelected)
+            // Trovo i servizi aggiuntivi spuntati
+            var checkboxesSelected = $('input[name="checkboxes"]:checked')
+            console.log(checkboxesSelected)
 
-        // Trovo i campi di nome, cognome e e-mail
-        var name = $("#name").val()
-        var surname = $("#surname").val()
-        var email = $("#email").val()
-        console.log(name + "," + surname + "," + email)
+            // Trovo per quanto tempo sono richiesti i servizi
+            var radioSelected = $('input[name="radios"]:checked')[0]
+            console.log(radioSelected)
 
-        // Invoco il file addClient.php server-side che aggiunge il cliente al file .csv
-        var separator = ","
-        var clientInfos = name + separator + surname + separator + email
-        $.ajax({
-            method: "POST",
-            url: "addClient.php",
-            data: { row : clientInfos }
-          })
-          .done(function( msg ) {
-              alert( "Data Saved: " + msg );
-            });
+            // Trovo i campi di nome, cognome e e-mail
+            var name = $("#name").val()
+            var surname = $("#surname").val()
+            var email = $("#email").val()
+            console.log(name + "," + surname + "," + email)
 
-        // TODO: preventivo pdf
-        
+            // Invoco il file addClient.php server-side che aggiunge il cliente al file .csv
+            var separator = ","
+            var clientInfos = name + separator + surname + separator + email
+            $.ajax({
+                method: "POST",
+                url: "addClient.php",
+                data: { row: clientInfos }
+            })
+                .done(function (msg) {
+                    alert("Data Saved: " + msg);
+                });
+        }
+        $(this)[0].classList.add('was-validated');
     })
-})
+});
+
 
 /**
  * 

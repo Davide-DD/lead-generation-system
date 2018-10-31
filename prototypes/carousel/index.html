@@ -127,19 +127,28 @@
 				  <div class="form-row">
 						<div class="form-group col-md-6">
 						  <label for="textinput">Nome</label>
-						  <input type="text" class="form-control" name="textinput" id="name" placeholder="Inserire il nome" required>
+              <input type="text" class="form-control" name="textinput" id="name" placeholder="Inserire il nome" required>
+              <div class="invalid-feedback">
+                Inserisci il tuo nome
+              </div>
 						</div>
 						<div class="form-group col-md-6">
 						  <label for="textinput">Cognome</label>
-						  <input type="text" class="form-control" name="textinput" id="surname" placeholder="Inserire il cognome" required>
+              <input type="text" class="form-control" name="textinput" id="surname" placeholder="Inserire il cognome" required>
+              <div class="invalid-feedback">
+                Inserisci il tuo cognome
+              </div>
 						</div>
 					  </div>
 					  <div class="form-group">
 						<label for="textinput">Email</label> 
-						<input type="email" class="form-control" name="textinput" id="email" placeholder="Inserire l'indirizzo email" required>
+            <input type="email" class="form-control" name="textinput" id="email" placeholder="Inserire l'indirizzo email" required>
+            <div class="invalid-feedback">
+              Inserisci un'e-mail valida
+            </div>
 					  </div>
 		
-					  <button class="btn btn-primary" type="button" id="confirm">Conferma</button>
+					  <button class="btn btn-primary" type="submit" id="confirm">Conferma</button>
 		
 			  </div>
 
