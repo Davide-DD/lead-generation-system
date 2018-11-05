@@ -1,14 +1,32 @@
+function checkCaptchaValidity() {
+    var result = grecaptcha.getResponse()
+    if (!result) {
+        // Display error
+        $("#captchaError").css("display", "")
+    }
+    else {
+        $("#captchaError").css("display", "none")
+    }
+    return result
+}
+
 $(document).ready(function () {
+
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     $('.needs-validation').submit(function (event) {
         if ($(this)[0].checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+            event.preventDefault()
+            event.stopPropagation()
+            checkCaptchaValidity()
         }
         else {
-            event.preventDefault();
-            event.stopPropagation();
+            event.preventDefault()
+            event.stopPropagation()
 
+            if (!checkCaptchaValidity()) {
+                return
+            }
+                
             // Trovo il servizio selezionato
             var serviceSelected = $('#' + serviceSelectedId)
             console.log(serviceSelected)
