@@ -30,31 +30,52 @@
         <!-- Form Name -->
         <legend>Golden Elbow</legend>
 
-        <div id="chooseService" class="state">
-        <h3 class="text-center mb-3">Scegli il servizio</h3>
+        <div class="container mb-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- Multiple Radios (inline) -->
-        <div class="card-deck">
-          <div class="col-md-3 offset-md-3">
-            <div class="card text-white bg-primary service" id="service1">
-              <div class="card-body">
-                <h5 class="card-title">Servizio 1</h5>
-                <p class="card-text">Descrizione del servizio 1</p>
+        <div id="chooseService" class="state">
+          <h3 class="text-center mb-3">Scegli il servizio</h3>
+
+          <!-- Multiple Radios (inline) -->
+          <div class="card-deck">
+            <div class="col-md-3 offset-md-3">
+              <div class="card text-white bg-primary service" id="service1">
+                <div class="card-body">
+                  <h5 class="card-title">Servizio 1</h5>
+                  <p class="card-text">Descrizione del servizio 1</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card text-white bg-danger service" id="service2">
-              <div class="card-body">
-                <h5 class="card-title">Servizio 2</h5>
-                <p class="card-text">Descrizione del servizio 2</p>
+            <div class="col-md-3">
+              <div class="card text-white bg-danger service" id="service2">
+                <div class="card-body">
+                  <h5 class="card-title">Servizio 2</h5>
+                  <p class="card-text">Descrizione del servizio 2</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-        
-        <div id="extraServices"class="state" style="display:none">
+
+        <div id="extraServices" class="state" style="display:none">
           <h3 class="text-center mt-4 mb-3">Seleziona i servizi aggiuntivi</h3>
 
           <!-- Multiple Checkboxes -->
@@ -88,7 +109,7 @@
           </div>
         </div>
 
-        <div id="timeOfService"class="state" style="display:none">
+        <div id="timeOfService" class="state" style="display:none">
           <h3 class="text-center mt-4 mb-3">Per quanto tempo vuoi usare il servizio?</h3>
 
           <!-- Multiple Radios (inline) -->
@@ -110,7 +131,7 @@
           </div>
         </div>
 
-        <div id="data"class="state" style="display:none">
+        <div id="data" class="state" style="display:none">
           <h3 class="text-center mt-4 mb-3">Inserisci i tuoi dati</h3>
 
           <!-- Text input-->
@@ -146,17 +167,16 @@
             </div>
           </div>
 
-          <!-- Button -->
-          <div class="form-group text-center mt-4">
-            <div class="col-md-12">
-              <button class="btn btn-primary" type="submit">Conferma</button>
-            </div>
-
-          </div>
-
       </fieldset>
     </form>
 
+    <div class="form-group text-center mt-5">
+        <div class="col-md-12">
+          <button class="btn btn-primary" type="submit">Conferma</button>
+        </div>
+      </div>
+
+    <!--
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-2 offset-md-4 text-center">
@@ -173,6 +193,7 @@
         </div>
       </div>
     </div>
+    -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
