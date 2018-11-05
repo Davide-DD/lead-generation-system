@@ -32,11 +32,11 @@ $(document).ready(function () {
             var clientInfos = name + separator + surname + separator + email
             $.ajax({
                 method: "POST",
-                url: "addClient.php",
+                url: "../../server/addClient.php",
                 data: { row: clientInfos }
             })
                 .done(function (msg) {
-                    alert("Data Saved: " + msg);
+                    alert("La tua richiesta è stata presa in carico correttamente. Premi Ok per visualizzare il tuo preventivo.");
                 });
         }
         $(this)[0].classList.add('was-validated');
