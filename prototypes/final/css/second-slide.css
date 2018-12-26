@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../font/proxima-nova-bold.ttf');
+  font-style: normal;
+}
+body {
+  background-color: #F6F6F6;
+  font-family: 'proxima-nova';
+}
+.centered-at-top {
+  font-size: 2rem;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.centered-below-top {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+.my-button {
+  width: 12rem;
+  height: 12rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  box-shadow: inset 0 0 0 5px white;
+}
+.yellow-border {
+  border: 4px solid rgb(255,204,0);
+}
+.blue-border {
+  border: 4px solid rgb(0,204,204);
+}
+.red-border {
+  border: 4px solid rgb(255,51,51);
+}

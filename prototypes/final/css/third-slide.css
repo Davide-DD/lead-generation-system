@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../font/proxima-nova-bold.ttf');
+  font-style: normal;
+}
+
+body {
+  font-family: 'proxima-nova';
+  background-color: #ffcc00;
+  color: black;
+  height: 100%;
+}
+
+.centered-at-top {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.centered-below-top {
+  position: absolute;
+  top: 25%;
+  width: 100%
+}
+
+ul {
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center; /* to center horizontally child inline elements */
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  width: 12rem;
+  height: 12rem;
+  text-align: center;
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+label div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+label:before {
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label {
+  color: black;
+  background-color: #ffff66;
+}

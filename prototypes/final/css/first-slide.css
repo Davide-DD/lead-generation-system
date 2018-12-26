@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../font/proxima-nova-bold.ttf');
+  font-style: normal;
+}
+body {
+  font-family: 'proxima-nova';
+}
+.bg-aci { background: #00cccc; }
+.bg-magma { background: #ff3333; }
+.centered-at-top {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  z-index: 1;
+}
+.my-paragraph {
+  border-radius: 3rem;
+  background: #000000;
+  padding: 1rem
+}
+.full-placeholder::before {
+  content: "Placeholder";
+}
+.full-placeholder {
+  visibility: hidden
+}
+.half-placeholder {
+  visibility: hidden
+}
+.plan-image {
+  height: 60px;
+}
+.my-button {
+  font-size: 1.5rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 3rem;
+  padding-right: 3rem; 
+  padding-left: 3rem
+}
+.my-button:focus {
+  color: white;
+  background-color: #007bff;
+}

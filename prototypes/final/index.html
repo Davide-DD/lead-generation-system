@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/full-slider.css" rel="stylesheet">
+    <link href="css/first-slide.css" rel="stylesheet">
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
@@ -34,26 +35,46 @@
         </ol>
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active state" id="chooseService" style="background-image: url('http://placehold.it/1900x1080/000000')">
+          <div class="carousel-item active state" id="chooseService">
 
-            <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                <div class="d-md-flex">
 
-              <div class="card-deck mx-auto">
-                <h3 class="col-sm-12">Scegli il tuo piano</h3>
-                <h3 class="col-sm-12">...</h3>
-                <div class="card mx-auto bg-primary service" style="width: 15rem; max-width: 18rem" id="service1">
-                  <div class="card-body text-center">
-                    <p class="card-text">Contiene questo questo e questo</p>
-                  </div>
-                  <div class="card-footer">BASIC</div>
-                </div>
-                <div class="card mx-auto bg-danger service" style="width: 15rem; max-width: 18rem" id="service2">
-                  <div class="card-body text-center">
-                    <p class="card-text">Contiene questo questo e questo</p>
-                  </div>
-                  <div class="card-footer">ADVANCED</div>
-                </div>
-              </div>
+                    <div class="centered-at-top">Scegli il tuo piano</div>
+        
+                    <!-- First Half -->
+        
+                    <div class="col-md-6 p-5 bg-aci">
+                        <div class="text-white text-center p-5">
+                            <div class="container-fluid">
+                                <img class="plan-image mt-5 mb-5" src="img/ACILOGO.png"/>
+                                <p class="my-paragraph">Gestione di un Social Network</p>
+                                <p class="my-paragraph">Strategic planning</p>
+                                <p class="my-paragraph">Piano editoriale</p>
+                                <p class="my-paragraph">5 Post grafici</p>
+                                <p class="my-paragraph">Servizio fotografico</p>
+                                <p class="my-paragraph">Analisi competitor e settore</p>
+                                <button class="btn mt-5 my-button" type="button">Aci</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Second Half -->
+        
+                    <div class="col-md-6 p-5 bg-magma">
+                        <div class="text-white text-center p-5">
+                            <div class="container-fluid">
+                                <img class="plan-image mt-5 mb-5" src="img/MAGMALOGO.png">
+                                <p class="my-paragraph">Gestione di un Social Network</p>
+                                <p class="my-paragraph">Strategic planning</p>
+                                <p class="my-paragraph">Piano editoriale</p>
+                                <p class="my-paragraph">5 Post grafici</p>
+                                <p class="my-paragraph">Servizio fotografico</p>
+                                <p class="my-paragraph">Analisi competitor e settore</p>
+                                <button class="btn mt-5 my-button" type="button">Magma</button>
+                            </div>
+                        </div>
+                    </div>
+        
 
             </div>
           </div>
