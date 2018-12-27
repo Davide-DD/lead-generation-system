@@ -20,7 +20,7 @@ body {
   top: 25%;
   left: 50%;
   width: 50%;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, 0%);
 }
 .my-button {
   width: 10rem;
