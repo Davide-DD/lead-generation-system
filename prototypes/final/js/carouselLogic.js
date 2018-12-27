@@ -169,7 +169,7 @@ function createEstimation() {
     doc.addImage(redDivider, 'JPEG', 14, 180, 180, 1.3)
 
     doc.text('Servizi singoli', 15, 195)
-    doc.text("TOTALE " + totalSelectedServicesPrice, 180, 235, null, null, 'right');
+    doc.text("TOTALE " + totalSelectedServicesPrice, 180, 265, null, null, 'right');
     /**
      *  FINE IMPOSTAZIONE TITOLI E FINE SEZIONI
     **/
@@ -183,13 +183,14 @@ function createEstimation() {
 
     doc.text(lengthSelectedId, 75, 135)
 
-    doc.text(firstSelectedServicesIds, 75, 195)  
-    doc.text(secondSelectedServicesIds, 115, 195)
+    doc.text(firstSelectedServicesIds, 75, 195)
+    doc.text(secondSelectedServicesIds, 135, 195)
+
     /**
      *  FINE IMPOSTAZIONE CONTENUTI
     **/
 
-    doc.addImage(endArrow, 'JPEG', 180, 245, 15, 15)
+    doc.addImage(endArrow, 'JPEG', 180, 270, 15, 15)
 
     window.open(doc.output('bloburl'))
 }
