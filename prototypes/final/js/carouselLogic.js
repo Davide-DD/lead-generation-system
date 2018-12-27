@@ -192,7 +192,7 @@ function createEstimation() {
 
     doc.addImage(endArrow, 'JPEG', 180, 270, 15, 15)
 
-    window.open(doc.output('bloburl'))
+    doc.output('dataurlnewwindow')
 }
 /**
  * FINE LOGICA DI CREAZIONE PREVENTIVO
