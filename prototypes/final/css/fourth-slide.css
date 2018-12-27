@@ -7,10 +7,29 @@ html, body {
   height: 100%;
   font-family: 'proxima-nova';
 }
+
+#businessname, #name, #surname, #email, #website, #telephone {
+  border-radius: 14px;
+  border-color: black;
+  border-width: medium;
+  font-weight: 800;
+}
+
+
 .bg-left { 
   background-image: url('../img/blue-waves.png'); 
+  background-repeat: round;
+  background-size: cover;
+  background-position: left;
+  margin-right: 82px;
 }
-.bg-right { background-image: url('../img/red-waves.png'); }
+.bg-right { 
+  background-image: url('../img/red-waves.png'); 
+  background-repeat: round;
+  background-size: cover;
+  background-position: left;
+  margin-right: 82px;
+}
 .centered-at-top {
   position: absolute;
   top: 5%;

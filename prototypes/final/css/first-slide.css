@@ -10,7 +10,7 @@ body {
 .bg-magma { background: #ff3333; }
 .centered-at-top {
   position: absolute;
-  top: 5%;
+  top: 7%;
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -19,7 +19,9 @@ body {
 .my-paragraph {
   border-radius: 3rem;
   background: #000000;
-  padding: 1rem
+  padding: 0.4rem;
+
+  font-size: 0.9rem;
 }
 .full-placeholder::before {
   content: "Placeholder";
@@ -34,11 +36,11 @@ body {
   height: 60px;
 }
 .my-button {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   background-color: rgba(255,255,255,0.7);
-  border-radius: 3rem;
-  padding-right: 3rem; 
-  padding-left: 3rem
+  border-radius: 2rem;
+  padding-right: 2rem; 
+  padding-left: 2rem
 }
 .my-button:focus {
   color: white;
