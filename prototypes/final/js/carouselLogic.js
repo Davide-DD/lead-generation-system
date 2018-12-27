@@ -1,7 +1,104 @@
+/**
+ * 
+ * INIZIO SLIDE DI SELEZIONE DEL SERVIZIO
+ * 
+ */
+var serviceSelectedId = ""
+$(".service-button").click(function (event) {
+    serviceSelectedId = $(this)[0].innerText
+    $(this).focus()
+    console.log(serviceSelectedId) // TODO: rimuovere finiti i test
+});
+var aciInfo = "", magmaInfo = ""
+$(".aci-info").each(function() {
+    aciInfo += $(this)[0].innerText + "\n"
+})
+$(".magma-info").each(function() {
+    magmaInfo += $(this)[0].innerText + "\n"
+})
+/**
+ * 
+ * FINE SLIDE DI SELEZIONE DEL SERVIZIO
+ * 
+ */
+
+/**
+ * 
+ * INIZIO SLIDE DI SELEZIONE DELLA DURATA
+ * 
+ */
+var lengthSelectedId = ""
+
+$(".length-button").click(function (event) {
+    lengthSelectedId = $(this)[0].innerText
+    $(this).focus()
+    console.log(lengthSelectedId) // TODO: rimuovere finiti i test
+});
+/**
+ * 
+ * FINE SLIDE DI SELEZIONE DELLA DURATA
+ * 
+ */
+
+/**
+ * 
+ * INIZIO SLIDE DI SELEZIONE DEI SERVIZI AGGIUNTIVI
+ * 
+ */
+var firstSelectedServicesIds = "", secondSelectedServicesIds = ""
+var totalSelectedServicesPrice = 0
+$(".confirmSelectedServices").click(function (event) {
+    var separation = $('input[type="checkbox"]:checked').length / 2
+    var counter = 0;
+    $('input[type="checkbox"]:checked').each(function() {
+        counter <= separation ? 
+        firstSelectedServicesIds += $(this)[0].value.substring(0, $(this)[0].value.indexOf("-") - 1) + "\n" :
+        secondSelectedServicesIds += $(this)[0].value.substring(0, $(this)[0].value.indexOf("-") - 1) + "\n";
+        totalSelectedServicesPrice += parseFloat($(this)[0].value.substring($(this)[0].value.indexOf("-") + 2))
+        counter += 1;
+    })    
+});
+/**
+ * 
+ * FINE SLIDE DI SELEZIONE DEI SERVIZI AGGIUNTIVI
+ * 
+ */
+
+/**
+* 
+* INIZIO SLIDE DI COMPILAZIONE FORM
+* 
+*/
+var name, surname, email, telephone, website, company
+
+$('.needs-validation').submit(function (event) {
+    event.preventDefault()
+
+    if ($(this)[0].checkValidity() === false) {
+        checkCaptchaValidity()
+    }
+    else {
+        if (!checkCaptchaValidity()) {
+            return
+        }
+
+        name = $("#name").val()
+        surname = $("#surname").val()
+        email = $("#email").val()
+        telephone = $("#telephone").val()
+        website = $("#website").val()
+        company = $("#company").val()
+
+        addClient()
+
+        createEstimation()
+    }
+    $(this)[0].classList.add('was-validated');
+})
+
 function checkCaptchaValidity() {
     var result = grecaptcha.getResponse()
     if (!result) {
-        // Display error
         $("#captchaError").css("display", "")
     }
     else {
@@ -9,18 +106,46 @@ function checkCaptchaValidity() {
     }
     return result
 }
+/**
+ * 
+ * FINE SLIDE DI COMPILAZIONE FORM
+ * 
+ */
 
-function addClient(name, surname, email) {
-    var separator = ","
-    var clientInfos = name + separator + surname + separator + email
+/**
+ * 
+ * INIZIO LOGICA APPLICATIVA
+ * 
+ */
+
+/**
+ * INIZIO LOGICA DI SALVATAGGIO CLIENTE
+ */
+var separator = ","
+
+function addClient() {
+    var clientInfos = name + separator + 
+    surname + separator + 
+    email + separator + 
+    telephone + separator + 
+    website + separator +
+    company + separator;
     $.ajax({
         method: "POST",
-        url: "http://localhost:8888/server/addClient.php", // TODO: cambiare l'indirizzo
+        url: "../../server/addClient.php", // TODO: cambiare l'indirizzo
         data: { row: clientInfos }
     })
 }
+/**
+ * FINE LOGICA DI SALVATAGGIO CLIENTE
+ */
 
-function createEstimation(serviceSelected, checkboxesSelected, radioSelected) {
+/**
+ * INIZIO LOGICA DI CREAZIONE PREVENTIVO
+ */
+var serviceLengthPrices = { "aci3months" : 200.00, "aci6months" : 400.00, "aci12months" : 800.00, 
+"magma3months" : 300.00, "magma6months" : 600.00, "magma12months" : 1200.00 }
+function createEstimation() {
     var doc = new jsPDF()
 
     doc.addFileToVFS('Proxima Nova Bold.ttf', font)
@@ -34,17 +159,17 @@ function createEstimation(serviceSelected, checkboxesSelected, radioSelected) {
     **/
     doc.setFontSize(16);
 
-    doc.text("Abbonamento\n" + serviceSelected.children()[1].innerText, 15, 75)  // TODO: cambiare ACI con il servizio selezionato
+    doc.text("Abbonamento\n" + serviceSelectedId, 15, 75)
 
     doc.addImage(greenDivider, 'JPEG', 14, 120, 180, 1.5)
 
-    doc.text('Durata\nabbonamento', 15, 135) // TODO: cambiare la durata dell'abbonamento
-    doc.text("TOTALE " + "453.00€", 180, 165, null, null, 'right'); // TODO: cambiare totale
+    doc.text('Durata\nabbonamento', 15, 135)
+    doc.text("TOTALE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase()], 180, 165, null, null, 'right');
 
     doc.addImage(redDivider, 'JPEG', 14, 180, 180, 1.3)
 
-    doc.text('Servizi singoli', 15, 195) // TODO: aggiungere i servizi selezionati dall'utente
-    doc.text("TOTALE " + "453.00€", 180, 235, null, null, 'right'); // TODO: cambiare totale
+    doc.text('Servizi singoli', 15, 195)
+    doc.text("TOTALE " + totalSelectedServicesPrice, 180, 235, null, null, 'right');
     /**
      *  FINE IMPOSTAZIONE TITOLI E FINE SEZIONI
     **/
@@ -54,83 +179,20 @@ function createEstimation(serviceSelected, checkboxesSelected, radioSelected) {
     **/
     doc.setFontSize(12);
 
-    doc.text("Gestione pagina Facebook\nLe cose\nTante altre cose", 75, 75)  // TODO: cambiare ACI con il servizio selezionato
+    serviceSelectedId === "Aci" ? doc.text(aciInfo, 75, 75) : doc.text(magmaInfo, 75, 75)
 
-    doc.text(radioSelected.value, 75, 135)  // TODO: cambiare ACI con il servizio selezionato
+    doc.text(lengthSelectedId, 75, 135)
 
-    doc.text("Logo\nVisit card\nLocandina", 75, 195)  // TODO: cambiare ACI con il servizio selezionato
-    doc.text("Logo\nVisit card\nLocandina", 115, 195)  // TODO: cambiare ACI con il servizio selezionato
+    doc.text(firstSelectedServicesIds, 75, 195)  
+    doc.text(secondSelectedServicesIds, 115, 195)
     /**
      *  FINE IMPOSTAZIONE CONTENUTI
     **/
 
     doc.addImage(endArrow, 'JPEG', 180, 245, 15, 15)
 
-    doc.output('dataurlnewwindow')
+    window.open(doc.output('bloburl'))
 }
-
-$('.needs-validation').submit(function (event) {
-    event.preventDefault()
-
-    if ($(this)[0].checkValidity() === false) {
-        checkCaptchaValidity()
-    }
-    else {
-        if (!checkCaptchaValidity()) {
-            return
-        }
-
-        // Trovo il servizio selezionato
-        var serviceSelected = $('#' + serviceSelectedId)
-
-        // Trovo i servizi aggiuntivi spuntati
-        var checkboxesSelected = $('input[name="checkboxes"]:checked')
-
-        // Trovo per quanto tempo sono richiesti i servizi
-        var radioSelected = $('input[name="radios"]:checked')[0]
-
-        // Trovo i campi di nome, cognome e e-mail
-        var name = $("#name").val()
-        var surname = $("#surname").val()
-        var email = $("#email").val()
-
-        addClient(name, surname, email)
-
-        createEstimation(serviceSelected, checkboxesSelected, radioSelected)
-    }
-    $(this)[0].classList.add('was-validated');
-})
-
 /**
- * 
- * Parte di logica che gestisce il cambio di colori quando un servizio è selezionato (nella prima slide)
- * 
+ * FINE LOGICA DI CREAZIONE PREVENTIVO
  */
-var serviceSelectedId = null
-var hasFirstSelected = false
-
-function findBg(element) {
-    var classList = element.attr('class').split(/\s+/);
-    var bg = null
-    $.each(classList, function (index, item) {
-        if (index === 2) {
-            bg = item
-        }
-    });
-    return bg
-}
-
-$(".service").on("click", function (event) {
-    serviceSelectedId = $(this).attr('id')
-    $(".service").each(function (i) {
-        if (serviceSelectedId !== $(this).attr('id')) {
-            if (!hasFirstSelected) $(this).removeClass(findBg($(this))).addClass("bg-secondary")
-            else $(this).removeClass("bg-success").addClass("bg-secondary")
-        }
-        else {
-            if (!hasFirstSelected) $(this).removeClass(findBg($(this))).addClass("bg-success")
-            else $(this).removeClass("bg-secondary").addClass("bg-success")
-        }
-    });
-    hasFirstSelected = true
-});

@@ -35,14 +35,14 @@ body {
 .plan-image {
   height: 60px;
 }
-.my-button {
+.service-button {
   font-size: 1.0rem;
   background-color: rgba(255,255,255,0.7);
   border-radius: 2rem;
   padding-right: 2rem; 
   padding-left: 2rem
 }
-.my-button:focus {
+.service-button:focus {
   color: white;
   background-color: #007bff;
 }

@@ -1,5 +1,4 @@
 <?php 
-header('Access-Control-Allow-Origin: *');
 if(!empty($_POST['row'])) {
     $data = $_POST['row'];
     

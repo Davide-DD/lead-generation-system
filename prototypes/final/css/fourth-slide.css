@@ -8,7 +8,7 @@ html, body {
   font-family: 'proxima-nova';
 }
 
-#businessname, #name, #surname, #email, #website, #telephone {
+#company, #name, #surname, #email, #website, #telephone {
   border-radius: 14px;
   border-color: black;
   border-width: medium;
@@ -48,4 +48,13 @@ html, body {
 .my-button:focus {
   color: white;
   background-color: #007bff;
+}
+.invalid-feedback {
+  font-size: 1rem;
+  color: #dc3545;
+  border-left: 6px solid #dc3545;
+  border-right: 6px solid #dc3545;
+  background-color: black;
+  padding-left: 1rem;
+  border-radius: 2rem 0rem 2rem 0rem; 
 }
