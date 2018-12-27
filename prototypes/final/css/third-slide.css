@@ -23,7 +23,7 @@ body {
 .centered-below-top {
   position: absolute;
   top: 25%;
-  width: 100%
+  width: 100%; 
 }
 
 ul {
@@ -43,8 +43,8 @@ input[type="checkbox"] {
 }
 
 label {
-  width: 12rem;
-  height: 12rem;
+  width: 8.5rem;
+  height: 8.5rem;
   text-align: center;
   color: white;
   background-color: black;

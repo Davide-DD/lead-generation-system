@@ -18,12 +18,14 @@ body {
 .centered-below-top {
   position: absolute;
   top: 25%;
-  width: 100%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -25%);
 }
 .my-button {
-  width: 12rem;
-  height: 12rem;
-  font-size: 2rem;
+  width: 12vw;
+  height: 12vw;
+  font-size: 2vw;
   border-radius: 50%;
   background-color: black;
   color: white;
