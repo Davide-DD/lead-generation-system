@@ -23,9 +23,9 @@ body {
   transform: translate(-50%, -25%);
 }
 .my-button {
-  width: 12vw;
-  height: 12vw;
-  font-size: 2vw;
+  width: 10rem;
+  height: 10rem;
+  font-size: 2rem;
   border-radius: 50%;
   background-color: black;
   color: white;
