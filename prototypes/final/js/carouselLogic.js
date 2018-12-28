@@ -185,14 +185,22 @@ function createEstimation() {
 
     doc.text(firstSelectedServicesIds, 75, 195)
     doc.text(secondSelectedServicesIds, 135, 195)
-
     /**
      *  FINE IMPOSTAZIONE CONTENUTI
     **/
 
     doc.addImage(endArrow, 'JPEG', 180, 270, 15, 15)
 
-    doc.output('dataurlnewwindow')
+    if(/Android/i.test(navigator.userAgent)) {
+        doc.output('datauri')
+    }
+    else {
+        if(! /webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            // Test per verificare se il dispositivo che sta visitando il sito e' fisso
+            doc.output('dataurlnewwindow')
+        }
+        doc.save('BeSide Preventivo.pdf')
+    }
 }
 /**
  * FINE LOGICA DI CREAZIONE PREVENTIVO
