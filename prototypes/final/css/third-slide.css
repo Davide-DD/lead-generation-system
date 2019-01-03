@@ -1,23 +1,8 @@
-@font-face {
-  font-family: 'proxima-nova';
-  src: url('../font/proxima-nova-bold.ttf');
-  font-style: normal;
-}
-
-body {
-  font-family: 'proxima-nova';
-  background-color: #ffcc00;
-  color: black;
+.third-container {
+  background-color: #ffcc00; 
+  color: black; 
   height: 100%;
-}
-
-.centered-at-top {
-  position: absolute;
-  top: 5%;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  z-index: 1;
+  display: none;
 }
 
 .centered-below-top {

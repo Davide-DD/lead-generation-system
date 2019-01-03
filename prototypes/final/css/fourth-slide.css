@@ -1,11 +1,6 @@
-@font-face {
-  font-family: 'proxima-nova';
-  src: url('../font/proxima-nova-bold.ttf');
-  font-style: normal;
-}
-html, body {
+.fourth-container {
   height: 100%;
-  font-family: 'proxima-nova';
+  display: none;
 }
 
 #company, #name, #surname, #email, #website, #telephone {
@@ -15,37 +10,31 @@ html, body {
   font-weight: 800;
 }
 
-.bg-left { 
+.bg-left-fourth { 
   background-image: url('../img/blue-waves.png'); 
   background-repeat: round;
   background-size: cover;
 }
-.bg-right { 
+.bg-right-fourth { 
   background-image: url('../img/red-waves.png'); 
   background-repeat: round;
   background-size: cover;
 }
-.centered-at-top {
-  position: absolute;
-  top: 5%;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
-  z-index: 1;
-}
-.centered-below-top {
+
+.centered-below-top-fourth {  /* CAMBIARE NOME */
   position: absolute;
   top: 25%;
   width: 100%;
   font-size: 2rem;
   z-index: 1;
 }
-.my-button {
+
+.my-button-fourth {
   color: white;
   background-color: black;
   border-radius: 2.5rem
 }
-.my-button:focus {
+.my-button-fourth:focus {
   color: white;
   background-color: #007bff;
 }
