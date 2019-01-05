@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+	<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-        <title>Full Slider - Start Bootstrap Template</title>
+		<title>Full Slider - Start Bootstrap Template</title>
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 		<script src="js/pdfResources.js"></script>
 		<link rel="stylesheet" href="css/common.css">
-        <link rel="stylesheet" href="css/first-slide.css">
+		<link rel="stylesheet" href="css/first-slide.css">
 		<link rel="stylesheet" href="css/second-slide.css">
 		<!--// COSE ESCLUSIVE ALLA SECONDA SLIDE NEGLI ELEMENTI COMUNI
 		background-color: #F6F6F6;-->
-		
-		
+
+
 		<link rel="stylesheet" href="css/third-slide.css">
 		<!--// COSE ESCLUSIVE ALLA TERZA SLIDE NEGLI ELEMENTI COMUNI
 		body {
@@ -31,575 +31,576 @@
 		  color: black;
 		  height: 100%;
 		}-->
-		
+
 		<link rel="stylesheet" href="css/fourth-slide.css">
 		<!--// COSE ESCLUSIVE ALLA QUARTA SLIDE NEGLI ELEMENTI COMUNI
 		html, body {
 		  height: 100%;
 		  font-family: 'proxima-nova';
 		}-->
-		
-        <!-- Bootstrap core JavaScript -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
 
-  </head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-  <body>
-  	  
+	</head>
+
+	<body>
+
 		<!-- Breadcrumb -->
-	<div id="footer" style="position:absolute; top:8px; height:40px;  left:0px; right:0px; overflow:hidden;"> 
-		<div class="mybreadcrumb centered-below-top-general" style="z-index: 2; justify-content: center; align-items: center;">
-			<a class="breadcrumb__step breadcrumb__step--active" href="#">Piano</a>
-			<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Durata</a>
-			<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Servizi Aggiuntivi</a>
-			<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Contattaci</a>
-		</div>
-	</div>
-	
-  <div id="content" style="position:absolute; top:0px; bottom:0px; left:0px; right:0px; overflow:auto;"> 
-  
-    <div id="firstSlide" class="state first-container">
-		<div id="firstSlideChild" class="d-md-flex">
-
-            <div class="centered-at-top">Scegli il tuo piano</div>
-
-            <!-- First Half -->
-
-            <div class="col-md-6 p-5 bg-aci-first">
-                <div class="text-white text-center p-5">
-                    <div class="container-fluid">
-                        <img class="plan-image-first mt-5 mb-5" src="img/ACILOGO.png" />
-                        <p class="my-paragraph-first full-placeholder-first"></p>
-                        <p class="my-paragraph-first aci-info-first">Gestione di un Social Network</p>
-                        <p class="my-paragraph-first aci-info-first">Strategic planning</p>
-                        <p class="my-paragraph-first aci-info-first">Piano editoriale</p>
-                        <p class="my-paragraph-first aci-info-first">5 Post grafici</p>
-                        <p class="my-paragraph-first aci-info-first">Servizio fotografico</p>
-                        <p class="my-paragraph-first aci-info-first">Analisi competitor e settore</p>
-                        <p class="my-paragraph-first full-placeholder-first"></p>
-                        <button class="confirm-choice btn mt-5 service-button-first" type="button">Aci</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second Half -->
-
-            <div class="col-md-6 p-5 bg-magma-first">
-                <div class="text-white text-center p-5">
-                    <div class="container-fluid">
-                        <img class="plan-image-first mt-5 mb-5" src="img/MAGMALOGO.png">
-                        <p class="my-paragraph-first magma-info-first">Gestione di un Social Network</p>
-                        <p class="my-paragraph-first magma-info-first">Strategic planning</p>
-                        <p class="my-paragraph-first magma-info-first">Piano editoriale</p>
-                        <p class="my-paragraph-first magma-info-first">5 Post grafici</p>
-                        <p class="my-paragraph-first magma-info-first">Servizio fotografico</p>
-                        <p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
-                        <p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
-                        <p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
-                        <button class="confirm-choice btn mt-5 service-button-first" type="button">Magma</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-	</div>
-	
-	<div id="secondSlide" class="state second-container">
-		<div id="secondSlideChild" class="">
-			<div class="centered-at-top">Scegli la durata del piano</div>
-
-			<div class="centered-below-top-second">
-				<div class="row justify-content-around">
-					<button class="confirm-choice btn length-button-second blue-border-second" type="button">3 Mesi</button>
-					<button class="confirm-choice btn length-button-second yellow-border-second" type="button">6 Mesi</button>
-					<button class="confirm-choice btn length-button-second red-border-second" type="button">12 Mesi</button>
-				</div>
+		<div id="footer" style="position:absolute; top:8px; height:40px;  left:0px; right:0px; overflow:hidden;">
+			<div class="mybreadcrumb centered-below-top-general" style="z-index: 2; justify-content: center; align-items: center;">
+				<a class="breadcrumb__step breadcrumb__step--active" href="#">Piano</a>
+				<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Durata</a>
+				<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Servizi Aggiuntivi</a>
+				<a class="breadcrumb__step breadcrumb__step--active" href="#" style="display: none">Contattaci</a>
 			</div>
 		</div>
-	</div>
-	
-	<div id="thirdSlide" class="state third-container">
-		<div id="thirdSlideChild" class="d-flex">
-			<div class="centered-at-top">Scegli i servizi aggiuntivi</div>
 
-				<div class="centered-below-top">
+		<div id="content" style="position:absolute; top:0px; bottom:0px; left:0px; right:0px; overflow:auto;">
 
-					<ul class="w-75">
-					
+			<div id="firstSlide" class="state first-container">
+				<div id="firstSlideChild" class="d-md-flex">
 
-						<li>
-							<input type="checkbox" id="cb1" value="Logo - 320"/>
-							<label for="cb1">
-								<div>
-									<span>
-										Logo
+					<div class="centered-at-top">Scegli il tuo piano</div>
+
+					<!-- First Half -->
+
+					<div class="col-md-6 p-5 bg-aci-first">
+						<div class="text-white text-center p-5">
+							<div class="container-fluid">
+								<img class="plan-image-first mt-5 mb-5" src="img/ACILOGO.png" />
+								<p class="my-paragraph-first full-placeholder-first"></p>
+								<p class="my-paragraph-first aci-info-first">Gestione di un Social Network</p>
+								<p class="my-paragraph-first aci-info-first">Strategic planning</p>
+								<p class="my-paragraph-first aci-info-first">Piano editoriale</p>
+								<p class="my-paragraph-first aci-info-first">5 Post grafici</p>
+								<p class="my-paragraph-first aci-info-first">Servizio fotografico</p>
+								<p class="my-paragraph-first aci-info-first">Analisi competitor e settore</p>
+								<p class="my-paragraph-first full-placeholder-first"></p>
+								<button class="confirm-choice btn mt-5 service-button-first" type="button">Aci</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Second Half -->
+
+					<div class="col-md-6 p-5 bg-magma-first">
+						<div class="text-white text-center p-5">
+							<div class="container-fluid">
+								<img class="plan-image-first mt-5 mb-5" src="img/MAGMALOGO.png">
+								<p class="my-paragraph-first magma-info-first">Gestione di un Social Network</p>
+								<p class="my-paragraph-first magma-info-first">Strategic planning</p>
+								<p class="my-paragraph-first magma-info-first">Piano editoriale</p>
+								<p class="my-paragraph-first magma-info-first">5 Post grafici</p>
+								<p class="my-paragraph-first magma-info-first">Servizio fotografico</p>
+								<p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
+								<p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
+								<p class="my-paragraph-first magma-info-first">Analisi competitor e settore</p>
+								<button class="confirm-choice btn mt-5 service-button-first" type="button">Magma</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="secondSlide" class="state second-container">
+				<div id="secondSlideChild" class="">
+					<div class="centered-at-top">Scegli la durata del piano</div>
+
+					<div class="centered-below-top-second">
+						<div class="row justify-content-around">
+							<button class="confirm-choice btn length-button-second blue-border-second" type="button">3 Mesi</button>
+							<button class="confirm-choice btn length-button-second yellow-border-second" type="button">6 Mesi</button>
+							<button class="confirm-choice btn length-button-second red-border-second" type="button">12 Mesi</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="thirdSlide" class="state third-container">
+				<div id="thirdSlideChild" class="d-flex">
+					<div class="centered-at-top">Scegli i servizi aggiuntivi</div>
+
+					<div class="centered-below-top">
+
+						<ul class="w-75">
+
+
+							<li>
+								<input type="checkbox" id="cb1" value="Logo - 320" />
+								<label for="cb1">
+									<div>
+										<span>
+											Logo
+											<br>
+											-
+											<br>
+											da 320
+										</span>
+									</div>
+								</label>
+							</li>
+
+							<li>
+								<input type="checkbox" id="cb2" value="Restyling logo - 160" />
+								<label for="cb2">
+									<div>
+										Restyling logo
 										<br>
 										-
 										<br>
-										da 320
-									</span>
-								</div>
-							</label>
-						</li>
+										da 160
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb2" value="Restyling logo - 160"/>
-							<label for="cb2">
-								<div>
-									Restyling logo
-									<br>
-									-
-									<br>
-									da 160
-								</div>
-							</label>
-						</li>
-
-						<li>
-							<input type="checkbox" id="cb3" value="Visit card - 60" />
-							<label for="cb3">
-								<div>
-									Visit card
-									<br>
-									<!--Carta intestata
+							<li>
+								<input type="checkbox" id="cb3" value="Visit card - 60" />
+								<label for="cb3">
+									<div>
+										Visit card
+										<br>
+										<!--Carta intestata
 									<br>
 									Busta
 									<br>-->
-									-
-									<br>
-									da 60
-								</div>
-							</label>
-						</li>
+										-
+										<br>
+										da 60
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb4" value="Flyer F/R - 50" />
-							<label for="cb4">
-								<div>
-									Flyer F/R
-									<br>
-									-
-									<br>
-									da 50
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb4" value="Flyer F/R - 50" />
+								<label for="cb4">
+									<div>
+										Flyer F/R
+										<br>
+										-
+										<br>
+										da 50
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb5" value="Locandina/Poster - 50"/>
-							<label for="cb5">
-								<div>
-									Locandina/Poster
-									<br>
-									-
-									<br>
-									da 50
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb5" value="Locandina/Poster - 50" />
+								<label for="cb5">
+									<div>
+										Locandina/Poster
+										<br>
+										-
+										<br>
+										da 50
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb6" value="Banner/Rollup - 70" />
-							<label for="cb6">
-								<div>
-									Banner/Rollup
-									<br>
-									-
-									<br>
-									da 70
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb6" value="Banner/Rollup - 70" />
+								<label for="cb6">
+									<div>
+										Banner/Rollup
+										<br>
+										-
+										<br>
+										da 70
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb7" value="Depliant - 150"/>
-							<label for="cb7">
-								<div>
-									Depliant
-									<br>
-									-
-									<br>
-									da 150
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb7" value="Depliant - 150" />
+								<label for="cb7">
+									<div>
+										Depliant
+										<br>
+										-
+										<br>
+										da 150
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb8" value="Brochure - 250"/>
-							<label for="cb8">
-								<div>
-									Brochure
-									<br>
-									-
-									<br>
-									da 250
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb8" value="Brochure - 250" />
+								<label for="cb8">
+									<div>
+										Brochure
+										<br>
+										-
+										<br>
+										da 250
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb9" value="Catalogo - 450"/>
-							<label for="cb9">
-								<div>
-									Catalogo
-									<br>
-									-
-									<br>
-									da 450
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb9" value="Catalogo - 450" />
+								<label for="cb9">
+									<div>
+										Catalogo
+										<br>
+										-
+										<br>
+										da 450
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb10" value="Post Social Media - 20"/>
-							<label for="cb10">
-								<div>
-									Post Social Media
-									<br>
-									-
-									<br>
-									da 20
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb10" value="Post Social Media - 20" />
+								<label for="cb10">
+									<div>
+										Post Social Media
+										<br>
+										-
+										<br>
+										da 20
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb11" value="Banner web - 50"/>
-							<label for="cb11">
-								<div>
-									Banner web
-									<br>
-									-
-									<br>
-									da 50
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb11" value="Banner web - 50" />
+								<label for="cb11">
+									<div>
+										Banner web
+										<br>
+										-
+										<br>
+										da 50
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb12" value="Infografica - 100"/>
-							<label for="cb12">
-								<div>
-									Infografica
-									<br>
-									-
-									<br>
-									da 100
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb12" value="Infografica - 100" />
+								<label for="cb12">
+									<div>
+										Infografica
+										<br>
+										-
+										<br>
+										da 100
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb13" value="Grafica sito web - 0"/>
-							<label for="cb13">
-								<div>
-									Grafica sito web
-									<br>
-									-
-									<br>
-									da concordare
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb13" value="Grafica sito web - 0" />
+								<label for="cb13">
+									<div>
+										Grafica sito web
+										<br>
+										-
+										<br>
+										da concordare
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb14" value="Report insight singolo - 15"/>
-							<label for="cb14">
-								<div>
-									Report insight singolo
-									<br>
-									-
-									<br>
-									15
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb14" value="Report insight singolo - 15" />
+								<label for="cb14">
+									<div>
+										Report insight singolo
+										<br>
+										-
+										<br>
+										15
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb15" value="Redazione testi offline - 0"/>
-							<label for="cb15">
-								<div>
-									Redazione testi offline
-									<br>
-									-
-									<br>
-									25xh
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb15" value="Redazione testi offline - 0" />
+								<label for="cb15">
+									<div>
+										Redazione testi offline
+										<br>
+										-
+										<br>
+										25xh
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb16" value="Studio UX/UI sito - 40"/>
-							<label for="cb16">
-								<div>
-									Studio UX/UI sito
-									<br>
-									-
-									<br>
-									40
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb16" value="Studio UX/UI sito - 40" />
+								<label for="cb16">
+									<div>
+										Studio UX/UI sito
+										<br>
+										-
+										<br>
+										40
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb17" value="Briefing pubblicitario - 50"/>
-							<label for="cb17">
-								<div>
-									Briefing pubblicitario
-									<br>
-									-
-									<br>
-									50
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb17" value="Briefing pubblicitario - 50" />
+								<label for="cb17">
+									<div>
+										Briefing pubblicitario
+										<br>
+										-
+										<br>
+										50
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb18" value="Report insight mensile - 50"/>
-							<label for="cb18">
-								<div>
-									Report insight mensile
-									<br>
-									-
-									<br>
-									50
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb18" value="Report insight mensile - 50" />
+								<label for="cb18">
+									<div>
+										Report insight mensile
+										<br>
+										-
+										<br>
+										50
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb19" value="Analisi sito e competitor - 70"/>
-							<label for="cb19">
-								<div>
-									Analisi sito e competitor
-									<br>
-									-
-									<br>
-									70
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb19" value="Analisi sito e competitor - 70" />
+								<label for="cb19">
+									<div>
+										Analisi sito e competitor
+										<br>
+										-
+										<br>
+										70
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb20" value="Analisi di mercato - 100"/>
-							<label for="cb20">
-								<div>
-									Analisi di mercato
-									<br>
-									-
-									<br>
-									100
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb20" value="Analisi di mercato - 100" />
+								<label for="cb20">
+									<div>
+										Analisi di mercato
+										<br>
+										-
+										<br>
+										100
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb21" value="Posizionamento SEO - 250"/>
-							<label for="cb21">
-								<div>
-									Posizionamento SEO
-									<br>
-									-
-									<br>
-									250
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb21" value="Posizionamento SEO - 250" />
+								<label for="cb21">
+									<div>
+										Posizionamento SEO
+										<br>
+										-
+										<br>
+										250
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb22" value="Video settimanale - 0"/>
-							<label for="cb22">
-								<div>
-									Video settimanale
-									<br>
-									-
-									<br>
-									da concordare
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb22" value="Video settimanale - 0" />
+								<label for="cb22">
+									<div>
+										Video settimanale
+										<br>
+										-
+										<br>
+										da concordare
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb23" value="Video generico 30s - 100"/>
-							<label for="cb23">
-								<div>
-									Video generico 30s
-									<br>
-									-
-									<br>
-									100
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb23" value="Video generico 30s - 100" />
+								<label for="cb23">
+									<div>
+										Video generico 30s
+										<br>
+										-
+										<br>
+										100
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb24" value="Video generico 2m - 150"/>
-							<label for="cb24">
-								<div>
-									Video generico 2m
-									<br>
-									-
-									<br>
-									150
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb24" value="Video generico 2m - 150" />
+								<label for="cb24">
+									<div>
+										Video generico 2m
+										<br>
+										-
+										<br>
+										150
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb25" value="Spot Facebook - 200"/>
-							<label for="cb25">
-								<div>
-									Spot Facebook
-									<br>
-									-
-									<br>
-									200
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb25" value="Spot Facebook - 200" />
+								<label for="cb25">
+									<div>
+										Spot Facebook
+										<br>
+										-
+										<br>
+										200
+									</div>
+								</label>
+							</li>
 
-						<li>
-							<input type="checkbox" id="cb26" value="Spot Instagram - 250"/>
-							<label for="cb26">
-								<div>
-									Spot Instagram
-									<br>
-									-
-									<br>
-									250
-								</div>
-							</label>
-						</li>
+							<li>
+								<input type="checkbox" id="cb26" value="Spot Instagram - 250" />
+								<label for="cb26">
+									<div>
+										Spot Instagram
+										<br>
+										-
+										<br>
+										250
+									</div>
+								</label>
+							</li>
 
-					</ul>
-				
-				<button id="confirmSelectedServices" class="confirm-choice btn btn-primary" type="submit">Conferma</button>
+						</ul>
+
+						<div class="confirm-choice-container">
+							<button id="confirmSelectedServices" class="confirm-choice btn btn-primary my-5" type="submit">Conferma</button>
+						</div>
+					</div>
+
+
 				</div>
-            
+			</div>
 
-		</div>
-	</div>
+			<div id="fourthSlide" class="state fourth-container">
+				<div id="fourthSlideChild" class="h-100">
+					<div class="d-flex h-100 justify-content-around">
 
-	<div id="fourthSlide" class="state fourth-container">
-		<div id="fourthSlideChild" class="h-100">
-			<div class="d-flex h-100 justify-content-around">
+						<div class="centered-at-top">Contattaci</div>
 
-				<div class="centered-at-top">Contattaci</div>
+						<div class="centered-below-top-fourth">
 
-				<div class="centered-below-top-fourth">
-
-					<form class="needs-validation" novalidate>
-						<div class="form-row">
-							<div class="col"></div>
-							<div class="form-group col-sm-3 col-5">
-								<input type="text" id="name" class="form-control" name="textinput" placeholder="Nome"
-									required />
-								<div class="invalid-feedback">
-									Inserisci un nome valido
+							<form class="needs-validation" novalidate>
+								<div class="form-row">
+									<div class="col"></div>
+									<div class="form-group col-sm-3 col-5">
+										<input type="text" id="name" class="form-control" name="textinput" placeholder="Nome" required />
+										<div class="invalid-feedback">
+											Inserisci un nome valido
+										</div>
+									</div>
+									<div class="form-group col-sm-3 col-5">
+										<input type="text" id="surname" class="form-control" name="textinput" placeholder="Cognome" required />
+										<div class="invalid-feedback">
+											Inserisci un cognome valido
+										</div>
+									</div>
+									<div class="col"></div>
 								</div>
-							</div>
-							<div class="form-group col-sm-3 col-5">
-								<input type="text" id="surname" class="form-control" name="textinput" placeholder="Cognome"
-									required />
-								<div class="invalid-feedback">
-									Inserisci un cognome valido
+
+								<div class="form-row">
+									<div class="col"></div>
+									<div class="form-group col-sm-6 col-10">
+										<input type="email" id="email" class="form-control" name="textinput" placeholder="Email" required />
+										<div class="invalid-feedback">
+											Inserisci un'e-mail valida
+										</div>
+									</div>
+									<div class="col"></div>
 								</div>
-							</div>
-							<div class="col"></div>
-						</div>
 
-						<div class="form-row">
-							<div class="col"></div>
-							<div class="form-group col-sm-6 col-10">
-								<input type="email" id="email" class="form-control" name="textinput" placeholder="Email"
-									required />
-								<div class="invalid-feedback">
-									Inserisci un'e-mail valida
+								<div class="form-row">
+									<div class="col"></div>
+									<div class="col-sm-4 col-7 form-group">
+										<input type="text" id="website" class="form-control" placeholder="Sito" />
+									</div>
+									<div class="col"></div>
 								</div>
-							</div>
-							<div class="col"></div>
-						</div>
 
-						<div class="form-row">
-							<div class="col"></div>
-							<div class="col-sm-4 col-7 form-group">
-								<input type="text" id="website" class="form-control" placeholder="Sito" />
-							</div>
-							<div class="col"></div>
-						</div>
+								<div class="form-row">
+									<div class="col"></div>
+									<div class="col-sm-4 col-7 form-group">
+										<input type="tel" id="telephone" class="form-control" placeholder="Telefono" />
+									</div>
+									<div class="col"></div>
 
-						<div class="form-row">
-							<div class="col"></div>
-							<div class="col-sm-4 col-7 form-group">
-								<input type="tel" id="telephone" class="form-control" placeholder="Telefono" />
-							</div>
-							<div class="col"></div>
+								</div>
 
-						</div>
+								<div class="form-row">
+									<div class="col"></div>
+									<div class="col-sm-4 col-7 form-group">
+										<input type="text" id="company" class="form-control" placeholder="Nome azienda" />
+									</div>
+									<div class="col"></div>
 
-						<div class="form-row">
-							<div class="col"></div>
-							<div class="col-sm-4 col-7 form-group">
-								<input type="text" id="company" class="form-control" placeholder="Nome azienda" />
-							</div>
-							<div class="col"></div>
+								</div>
 
-						</div>
-
-						<div style="text-align:center;"> 
-							<div class="g-recaptcha" style="display:inline-block;" data-theme="dark" data-sitekey="6LcR33gUAAAAACOV6IH1juoFLqit9laV4gqvGFux"
-								data-callback="checkCaptchaValidity" data-error-callback="checkCaptchaValidity">
-							</div>
-							<div class="form-row">
-							<div class="col"></div>
-							<div class="col-sm-4 col-7 form-group" id="captchaError" style="display: none; width: 100%; 
+								<div style="text-align:center;">
+									<div class="g-recaptcha" style="display:inline-block;" data-theme="dark" data-sitekey="6LcR33gUAAAAACOV6IH1juoFLqit9laV4gqvGFux"
+									 data-callback="checkCaptchaValidity" data-error-callback="checkCaptchaValidity">
+									</div>
+									<div class="form-row">
+										<div class="col"></div>
+										<div class="col-sm-4 col-7 form-group" id="captchaError" style="display: none; width: 100%; 
 							margin-bottom: 2rem;
 							font-size: 1rem; color: #dc3545; 
 							border-left: 6px solid #dc3545; border-right: 6px solid #dc3545; border-radius: 2rem 0rem 2rem 0rem; 
-							background-color: black;"> <!-- NON E' POSSIBILE SPOSTARE LO STILE DEL CAPTCHA ERROR NEL CSS -->
-								Dimostra di non essere un robot
-							</div>
-							<div class="col"></div>
-						</div>
+							background-color: black;">
+											<!-- NON E' POSSIBILE SPOSTARE LO STILE DEL CAPTCHA ERROR NEL CSS -->
+											Dimostra di non essere un robot
+										</div>
+										<div class="col"></div>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="col"></div>
+									<button class="confirm-choice btn my-button-fourth col-sm-2 col-3" type="submit">Invia</button>
+									<div class="col"></div>
+								</div>
+
+							</form>
+
 						</div>
 
-						<div class="form-row">
-							<div class="col"></div>
-							<button class="confirm-choice btn my-button-fourth col-sm-2 col-3" type="submit">Invia</button>
-							<div class="col"></div>
-						</div>
+						<!-- First Half -->
 
-					</form>
+						<div class="col-5 h-100 bg-left-fourth"></div>
 
+						<!-- Second Half -->
+
+						<div class="col-5 h-100 bg-right-fourth"></div>
+
+					</div>
 				</div>
-
-				<!-- First Half -->
-
-				<div class="col-5 h-100 bg-left-fourth"></div>
-
-				<!-- Second Half -->
-
-				<div class="col-5 h-100 bg-right-fourth"></div>
-
 			</div>
 		</div>
-	</div>	
-  </div> 
 
-	
-  </body>
 
-  <!-- Bootstrap core JavaScript -->
+	</body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
 
-  <script src="js/informationLogic.js"></script>
-  <script src="js/navigationLogic.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+	<script src="js/informationLogic.js"></script>
+	<script src="js/navigationLogic.js"></script>
+
 </html>

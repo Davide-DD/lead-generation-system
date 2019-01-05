@@ -11,6 +11,11 @@
   width: 100%; 
 }
 
+.confirm-choice-container {
+  display: flex; 
+  justify-content: center;
+}
+
 ul {
   margin: 0 auto;
   list-style-type: none;
