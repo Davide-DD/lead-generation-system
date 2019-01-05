@@ -4,16 +4,15 @@
  * 
  */
 var serviceSelectedId = ""
-$(".service-button").click(function (event) {
+$(".service-button-first").click(function (event) {
     serviceSelectedId = $(this)[0].innerText
     $(this).focus()
-    console.log(serviceSelectedId) // TODO: rimuovere finiti i test
 });
 var aciInfo = "", magmaInfo = ""
-$(".aci-info").each(function() {
+$(".aci-info-first").each(function() {
     aciInfo += $(this)[0].innerText + "\n"
 })
-$(".magma-info").each(function() {
+$(".magma-info-first").each(function() {
     magmaInfo += $(this)[0].innerText + "\n"
 })
 /**
@@ -29,10 +28,9 @@ $(".magma-info").each(function() {
  */
 var lengthSelectedId = ""
 
-$(".length-button").click(function (event) {
+$(".length-button-second").click(function (event) {
     lengthSelectedId = $(this)[0].innerText
     $(this).focus()
-    console.log(lengthSelectedId) // TODO: rimuovere finiti i test
 });
 /**
  * 
@@ -47,7 +45,7 @@ $(".length-button").click(function (event) {
  */
 var firstSelectedServicesIds = "", secondSelectedServicesIds = ""
 var totalSelectedServicesPrice = 0
-$(".confirmSelectedServices").click(function (event) {
+$("#confirmSelectedServices").click(function (event) {
     var separation = $('input[type="checkbox"]:checked').length / 2
     var counter = 0;
     $('input[type="checkbox"]:checked').each(function() {
@@ -56,7 +54,7 @@ $(".confirmSelectedServices").click(function (event) {
         secondSelectedServicesIds += $(this)[0].value.substring(0, $(this)[0].value.indexOf("-") - 1) + "\n";
         totalSelectedServicesPrice += parseFloat($(this)[0].value.substring($(this)[0].value.indexOf("-") + 2))
         counter += 1;
-    })    
+    })
 });
 /**
  * 
@@ -75,12 +73,12 @@ $('.needs-validation').submit(function (event) {
     event.preventDefault()
 
     if ($(this)[0].checkValidity() === false) {
-        //checkCaptchaValidity()
+        checkCaptchaValidity()
     }
     else {
-        /*if (!checkCaptchaValidity()) {
+        if (!checkCaptchaValidity()) {
             return
-        }*/
+        }
 
         name = $("#name").val()
         surname = $("#surname").val()
@@ -124,7 +122,6 @@ function checkCaptchaValidity() {
 var separator = ","
 
 function addClient() {
-	console.log("UE DEFICIENTE")
     var clientInfos = name + separator + 
     surname + separator + 
     email + separator + 
@@ -133,7 +130,7 @@ function addClient() {
     company + separator;
     $.ajax({
         method: "POST",
-        url: "addClient.php", // TODO: cambiare l'indirizzo
+        url: "addClient.php",
         data: { row: clientInfos }
     })
 }
@@ -144,8 +141,8 @@ function addClient() {
 /**
  * INIZIO LOGICA DI CREAZIONE PREVENTIVO
  */
-var serviceLengthPrices = { "aci3months" : 200.00, "aci6months" : 400.00, "aci12months" : 800.00, 
-"magma3months" : 300.00, "magma6months" : 600.00, "magma12months" : 1200.00 }
+var serviceLengthPrices = { "aci3mesi" : 200.00, "aci6mesi" : 400.00, "aci12mesi" : 800.00, 
+"magma3mesi" : 300.00, "magma6mesi" : 600.00, "magma12mesi" : 1200.00 }
 function createEstimation() {
     var doc = new jsPDF()
 
@@ -165,12 +162,12 @@ function createEstimation() {
     doc.addImage(greenDivider, 'JPEG', 14, 120, 180, 1.5)
 
     doc.text('Durata\nabbonamento', 15, 135)
-    doc.text("TOTALE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase()], 180, 165, null, null, 'right');
+    doc.text("TOTALE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase().replace(/ /g,'')].toFixed(2), 180, 165, null, null, 'right');
 
     doc.addImage(redDivider, 'JPEG', 14, 180, 180, 1.3)
 
     doc.text('Servizi singoli', 15, 195)
-    doc.text("TOTALE " + totalSelectedServicesPrice, 180, 265, null, null, 'right');
+    doc.text("TOTALE " + totalSelectedServicesPrice.toFixed(2), 180, 265, null, null, 'right');
     /**
      *  FINE IMPOSTAZIONE TITOLI E FINE SEZIONI
     **/
