@@ -101,10 +101,12 @@ function goToNextState(command) {
     var currentIndex = states.indexOf(currentState)
     var nextIndex
     if (command === "previous") {
+		
         if (currentIndex === 0) nextIndex = 0
         else nextIndex = currentIndex - 1
     }
     else {
+		console.log("SONO QUI")
         if (currentIndex === states.length - 1) nextIndex = states.length - 1
         else nextIndex = currentIndex + 1
     }
@@ -130,4 +132,8 @@ $("#previous").click(function () {
 
 $("#next").click(function () {
     goToNextState("next")
+})
+
+$("#confirm").click(function () {
+    goToNextState("confirm")
 })

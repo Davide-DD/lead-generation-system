@@ -75,18 +75,18 @@ $('.needs-validation').submit(function (event) {
     event.preventDefault()
 
     if ($(this)[0].checkValidity() === false) {
-        checkCaptchaValidity()
+        //checkCaptchaValidity()
     }
     else {
-        if (!checkCaptchaValidity()) {
+        /*if (!checkCaptchaValidity()) {
             return
-        }
+        }*/
 
         name = $("#name").val()
         surname = $("#surname").val()
         email = $("#email").val()
+		website = $("#website").val()
         telephone = $("#telephone").val()
-        website = $("#website").val()
         company = $("#company").val()
 
         addClient()
@@ -124,6 +124,7 @@ function checkCaptchaValidity() {
 var separator = ","
 
 function addClient() {
+	console.log("UE DEFICIENTE")
     var clientInfos = name + separator + 
     surname + separator + 
     email + separator + 
@@ -132,7 +133,7 @@ function addClient() {
     company + separator;
     $.ajax({
         method: "POST",
-        url: "../../server/addClient.php", // TODO: cambiare l'indirizzo
+        url: "addClient.php", // TODO: cambiare l'indirizzo
         data: { row: clientInfos }
     })
 }
