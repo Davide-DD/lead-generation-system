@@ -53,8 +53,17 @@ label {
 }
 
 .third-type {
-  color: #ffcc00;
+  color: #ffb400;
   background-color: white;
+}
+
+.third-slide-button {
+  font-size: 1.0rem;
+  background-color: rgba(0,0,0,1);
+  border-radius: 2rem;
+  border-color: rgba(0,0,0,1);
+  padding-right: 2rem; 
+  padding-left: 2rem
 }
 
 label div {
