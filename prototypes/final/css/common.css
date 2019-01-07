@@ -27,9 +27,9 @@ body {
 /* Breadcrumb */
 
 :root {
-  --breadcrumb-theme-1: #1636D3;
-  --breadcrumb-theme-2: #E9F1FF;
-  --breadcrumb-theme-3: #040F44;
+  --breadcrumb-theme-1: #000000; /* sfondo */
+  --breadcrumb-theme-2: #FFFFFF; /* testo*/
+  --breadcrumb-theme-3: rgb(255,204,0); /* freccina*/
 }
 .mybreadcrumb {
   position: relative;
