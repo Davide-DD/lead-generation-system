@@ -22,6 +22,17 @@
 	}
 }
 
+@media (max-width: 720px) {
+    .centered-below-top-second { 
+	  position: absolute;
+	  top: 20%;
+	  left: 50%;
+	  width: 50%;
+	  transform: scale(0.8,0.8) translate(-63%, 0%);
+	  transform-origin: center center;
+	}
+}
+
 .length-button-second {
   width: 10rem;
   height: 10rem;
