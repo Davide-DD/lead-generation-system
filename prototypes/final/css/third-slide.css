@@ -23,23 +23,41 @@ ul {
   padding: 0;
 }
 
-li {
-  display: inline-block;
-  margin: 0.2rem;
+@media (max-width: 767px) {
+  li {
+    width:100%;
+    display: inline-block;
+    margin: 0.2rem;
+  }  
+  label {
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  li {
+    display: inline-block;
+    margin: 0.2rem;
+  }  
+  label {
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
 }
 
 input[type="checkbox"] {
   display: none;
-}
-
-label {
-  width: 8rem;
-  height: 8rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  font-size: 0.9rem;
 }
 
 .first-type {
