@@ -6,11 +6,22 @@
 
 .centered-below-top-second { 
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 50%;
   width: 50%;
   transform: translate(-50%, 0%);
 }
+
+@media (max-width: 1080px) {
+    .centered-below-top-second { 
+	  position: absolute;
+	  top: 20%;
+	  left: 50%;
+	  width: 50%;
+	  transform: translate(-50%, 0%);
+	}
+}
+
 .length-button-second {
   width: 10rem;
   height: 10rem;
