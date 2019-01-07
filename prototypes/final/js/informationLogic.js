@@ -172,12 +172,12 @@ function createEstimation() {
     doc.addImage(greenDivider, 'JPEG', 14, 120, 180, 1.5)
 
     doc.text('Durata\nabbonamento', 15, 135)
-    doc.text("TOTALE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase().replace(/ /g,'')].toFixed(2), 180, 165, null, null, 'right');
+    doc.text("TOTALE AL MESE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase().replace(/ /g,'')].toFixed(2), 180, 165, null, null, 'right');
 
     doc.addImage(redDivider, 'JPEG', 14, 180, 180, 1.3)
 
     doc.text('Servizi singoli', 15, 195)
-    doc.text("TOTALE " + totalSelectedServicesPrice.toFixed(2), 180, 265, null, null, 'right');
+    doc.text("TOTALE UNA TANTUM " + totalSelectedServicesPrice.toFixed(2), 180, 265, null, null, 'right');
     /**
      *  FINE IMPOSTAZIONE TITOLI E FINE SEZIONI
     **/

@@ -10,11 +10,21 @@
   font-weight: 800;
 }
 
+.background-container {
+  position: fixed !important;
+  margin:0;
+  width: 100%;
+  height: 88%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -58%)
+}
+
 .bg-left-fourth { 
   background-image: url('../img/blue-waves.png');
 }
 .bg-right-fourth { 
-  background-image: url('../img/red-waves.png'); 
+  background-image: url('../img/red-waves.png');
 }
 
 .centered-below-top-fourth {  /* CAMBIARE NOME */
@@ -28,7 +38,8 @@
 .my-button-fourth {
   color: white;
   background-color: black;
-  border-radius: 2.5rem
+  border-radius: 2.5rem;
+  margin-bottom: 4rem;
 }
 .my-button-fourth:focus {
   color: white;

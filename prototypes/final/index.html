@@ -51,7 +51,7 @@
 	<body>
 
 		<!-- Breadcrumb -->
-		<div id="footer" style="position:absolute; top:8px; height:40px;  left:0px; right:0px; overflow:hidden;">
+		<div id="footer" style="position:relative; top:8px; height:40px;  left:0px; right:0px; overflow:hidden;">
 			<div class="mybreadcrumb centered-below-top-general" style="z-index: 2; justify-content: center; align-items: center;">
 				<a class="breadcrumb__step breadcrumb__step--active" href="#">
 				<span class="full-text">Piano</span>
@@ -499,8 +499,13 @@
 			</div>
 
 			<div id="fourthSlide" class="state fourth-container">
-				<div id="fourthSlideChild" class="h-100">
-					<div class="d-flex h-100 justify-content-around">
+				<div id="fourthSlideChild" class="">
+					<div class="d-flex">
+
+						<div class="row background-container justify-content-around">
+							<div class="col-5 bg-left-fourth h-100 my-5"></div>
+							<div class="col-5 bg-right-fourth h-100 my-5"></div>
+						</div>
 
 						<div class="centered-at-top">Lascia i tuoi dati</div>
 
@@ -587,15 +592,8 @@
 
 							</form>
 
-						</div>
 
-						<!-- First Half -->
-
-						<div class="col-5 bg-left-fourth my-5"></div>
-
-						<!-- Second Half -->
-
-						<div class="col-5 bg-right-fourth my-5"></div>
+						</div>	
 
 					</div>
 				</div>
