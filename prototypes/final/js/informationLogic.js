@@ -28,7 +28,17 @@ $(".magma-info-first").each(function() {
  */
 var lengthSelectedId = ""
 
-$(".length-button-second").click(function (event) {
+$(".length-button-second-red").click(function (event) {
+    lengthSelectedId = $(this)[0].innerText
+    $(this).focus()
+});
+
+$(".length-button-second-yellow").click(function (event) {
+    lengthSelectedId = $(this)[0].innerText
+    $(this).focus()
+});
+
+$(".length-button-second-blue").click(function (event) {
     lengthSelectedId = $(this)[0].innerText
     $(this).focus()
 });
