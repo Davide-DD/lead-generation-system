@@ -36,19 +36,31 @@ label {
   width: 8rem;
   height: 8rem;
   text-align: center;
-  color: white;
-  background-color: black;
   border-radius: 0.5rem;
   position: relative;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
+.first-type {
+  color: white;
+  background-color: black;
+}
+
+.second-type {
+  color: black;
+  background-color: #ffff66;
+}
+
+.third-type {
+  color: #ffcc00;
+  background-color: white;
+}
+
 label div {
   position: absolute;
   top: 50%;
   left: 50%;
-  
   transform: translate(-50%, -50%);
 }
 
@@ -71,6 +83,7 @@ label:before {
 }
 
 :checked + label {
-  color: black;
-  background-color: #ffff66;
+  border-color: #00cccc;
+  border-style: solid;
+  border-width: 0.2rem;
 }

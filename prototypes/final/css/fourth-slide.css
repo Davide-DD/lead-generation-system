@@ -11,14 +11,10 @@
 }
 
 .bg-left-fourth { 
-  background-image: url('../img/blue-waves.png'); 
-  background-repeat: round;
-  background-size: cover;
+  background-image: url('../img/blue-waves.png');
 }
 .bg-right-fourth { 
   background-image: url('../img/red-waves.png'); 
-  background-repeat: round;
-  background-size: cover;
 }
 
 .centered-below-top-fourth {  /* CAMBIARE NOME */

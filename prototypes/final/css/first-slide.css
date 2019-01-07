@@ -5,11 +5,26 @@
 
 }
 
+@media(min-width:1200px){
+  .my-paragraph-first {
+    margin-right: 8rem;
+    margin-left: 8rem
+  }  
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .my-paragraph-first {
+    margin-right: 4rem;
+    margin-left: 4rem
+  }  
+}
+
 .my-paragraph-first {
   border-radius: 3rem;
   background: #000000;
-  padding: 0.4rem;
+  padding: 1rem;
   font-size: 0.9rem;
+  line-height: 1.2rem
 }
 .full-placeholder-first::before {
   content: "Placeholder";
@@ -33,4 +48,7 @@
 .service-button-first:focus {
   color: white;
   background-color: #007bff;
+}
+.service-button-first:hover {
+  background-color: #ffff66;
 }
