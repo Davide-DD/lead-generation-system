@@ -11,6 +11,12 @@
   width: 100%; 
 }
 
+@media (max-width: 800px) {
+  .centered-below-top {
+    margin-top: 1.5rem;
+  }
+}
+
 .confirm-choice-container {
   display: flex; 
   justify-content: center;
