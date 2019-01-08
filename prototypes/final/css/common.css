@@ -7,6 +7,34 @@ body {
   font-family: 'proxima-nova';
 }
 
+.my-footer {
+	position: relative;
+    top: 8px;
+    height: 40px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+@media (max-width: 1080px) {
+	.my-footer {
+		position:absolute;
+	}
+}
+
+.my-content {
+	position:absolute; 
+	top:0px; 
+	bottom:0px; 
+	left:0px; 
+	right:0px; 
+	overflow:auto;
+}
+@media (max-width: 1080px) {
+	.my-content {
+		position: inherit; 
+	}
+}
+
 .centered-at-top {
   position: absolute;
   top: 7%;

@@ -20,6 +20,13 @@
 	  width: 50%;
 	  transform: translate(-50%, 0%);
 	}
+	
+	.confirm-choice {
+	  margin-top: 6px;
+	  margin-bottom: 6px;
+	  margin-left: 6px;
+	  margin-right: 6px;
+	}
 }
 
 @media (max-width: 720px) {
@@ -30,6 +37,11 @@
 	  width: 50%;
 	  transform: scale(0.8,0.8) translate(-63%, 0%);
 	  transform-origin: center center;
+	}
+	
+	.confirm-choice {
+	  margin-top: 10px;
+	  margin-bottom: 10px;
 	}
 }
 
