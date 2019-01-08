@@ -4,6 +4,7 @@
  * 
  */
 var serviceSelectedId = ""
+var servicesPrice = { "Aci" : 200.00, "Magma" : 400.00 }
 $(".service-button-first").click(function (event) {
     serviceSelectedId = $(this)[0].innerText
     $(this).focus()
@@ -98,7 +99,7 @@ $('.needs-validation').submit(function (event) {
         company = $("#company").val()
 
         addClient()
-
+        
         createEstimation()
     }
     $(this)[0].classList.add('was-validated');
@@ -151,8 +152,6 @@ function addClient() {
 /**
  * INIZIO LOGICA DI CREAZIONE PREVENTIVO
  */
-var serviceLengthPrices = { "aci3mesi" : 200.00, "aci6mesi" : 400.00, "aci12mesi" : 800.00, 
-"magma3mesi" : 300.00, "magma6mesi" : 600.00, "magma12mesi" : 1200.00 }
 function createEstimation() {
     var doc = new jsPDF()
 
@@ -172,7 +171,7 @@ function createEstimation() {
     doc.addImage(greenDivider, 'JPEG', 14, 120, 180, 1.5)
 
     doc.text('Durata\nabbonamento', 15, 135)
-    doc.text("TOTALE AL MESE " + serviceLengthPrices[serviceSelectedId.toLowerCase() + lengthSelectedId.toLowerCase().replace(/ /g,'')].toFixed(2), 180, 165, null, null, 'right');
+    doc.text("TOTALE AL MESE " + servicesPrice[serviceSelectedId].toFixed(2), 180, 165, null, null, 'right');
 
     doc.addImage(redDivider, 'JPEG', 14, 180, 180, 1.3)
 
