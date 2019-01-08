@@ -7,6 +7,35 @@ body {
   font-family: 'proxima-nova';
 }
 
+.my-footer {
+	position: relative;
+    top: 8px;
+    height: 40px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+@media (max-width: 1080px) {
+	.my-footer {
+		position:absolute;
+		
+	}
+}
+
+.my-content {
+	position:absolute; 
+	top:0px; 
+	bottom:0px; 
+	left:0px; 
+	right:0px; 
+	overflow:auto;
+}
+@media (max-width: 1080px) {
+	.my-content {
+		position: inherit; 
+	}
+}
+
 .centered-at-top {
   position: absolute;
   top: 7%;
@@ -14,6 +43,7 @@ body {
   text-align: center;
   font-size: 2rem;
   z-index: 1;
+  margin-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
