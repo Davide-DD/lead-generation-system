@@ -3,13 +3,14 @@
   src: url('../font/proxima-nova-bold.ttf');
   font-style: normal;
 }
+
 body {
   font-family: 'proxima-nova';
 }
 
 .my-footer {
 	position: relative;
-    top: 8px;
+    top: 2rem;
     height: 40px;
     left: 0px;
     right: 0px;
