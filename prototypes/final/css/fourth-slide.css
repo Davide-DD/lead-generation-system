@@ -30,11 +30,12 @@
 }
 
 .centered-below-top-fourth {  /* CAMBIARE NOME */
-  position: fixed;
+  position: absolute;
   top: 25%;
   width: 100%;
   font-size: 2rem;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .my-button-fourth {
