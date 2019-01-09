@@ -30,7 +30,7 @@
 }
 
 .centered-below-top-fourth {  /* CAMBIARE NOME */
-  position: absolute;
+  position: fixed;
   top: 25%;
   width: 100%;
   font-size: 2rem;
