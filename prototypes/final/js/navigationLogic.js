@@ -36,6 +36,14 @@ $(".confirm-choice").click(function () {
 	goToNextState();
 })
 
+$(".startbutton").click(function () {
+    $(".prestate").fadeOut()
+	
+    $("#" + currentState).fadeIn()
+	$(".centered-at-top").fadeIn()
+	$(".my-footer").fadeIn()
+})
+
 
 function goToState(desiredState) {
 	var currentIndex = states.indexOf(currentState)

@@ -2,7 +2,7 @@
 .bg-magma-first { background: #ff3333; }
 
 .first-container {
-
+	display: none;
 }
 
 @media(min-width:1200px){

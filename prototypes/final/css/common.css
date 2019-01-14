@@ -8,6 +8,7 @@ body {
 }
 
 .my-footer {
+	display: none;
 	position: relative;
     top: 8px;
     height: 40px;
@@ -38,6 +39,7 @@ body {
 
 .centered-at-top {
   position: absolute;
+  display: none;
   top: 7%;
   width: 100%;
   text-align: center;
