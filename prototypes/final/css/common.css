@@ -10,6 +10,7 @@ body {
 
 .my-footer {
 	position: relative;
+	display: none;
     top: 2rem;
     height: 40px;
     left: 0px;
