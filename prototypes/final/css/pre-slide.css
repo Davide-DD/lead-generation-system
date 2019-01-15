@@ -1,0 +1,54 @@
+.zero-container{
+  width: 100%;
+  height: 100%;
+  background: 
+    url(../img/topleft.png) left 0px top 0px no-repeat, 
+    url(../img/topright.png) right 0px top 0px no-repeat, 
+    url(../img/bottomleft.png) left 0px bottom 0px no-repeat, 
+    url(../img/bottomright.png) right 0px bottom 0px no-repeat, 
+    white;
+	background-size: 45% 45%;
+  padding: 40px;
+}
+
+.preslideTextContainer {
+  text-align: left;
+  color: black;
+  font-size: 4rem;
+  line-height: 85%;
+  z-index: 1;
+
+}
+
+@media (max-width:1000px) {
+	.preslideTextContainer {
+	  font-size: 2.5rem;
+	  width: fit-content;
+	}
+}
+
+.preslideImgContainer {
+	height: auto;
+    width: auto;
+}
+
+.startbutton {
+  background-image: url(../img/startbutton.png);
+  width: 212px;
+  height: 212px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  background-color: transparent; 
+  border: none;
+  font-size: 1.2rem;
+}
+
+.prestate {
+ height: -webkit-fill-available;
+ padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 20%;
+    padding-left: 20%;
+}
