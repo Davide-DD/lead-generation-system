@@ -37,7 +37,7 @@ $(".confirm-choice").click(function () {
 })
 
 $(".startbutton").click(function () {
-    $(".prestate").fadeOut()
+    $("#preSlide").fadeOut()
 	
     $("#" + currentState).fadeIn()
 	$(".centered-at-top").fadeIn()
