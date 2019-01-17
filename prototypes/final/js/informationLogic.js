@@ -80,7 +80,7 @@ $("#confirmSelectedServices").click(function (event) {
 var name, surname, email, telephone, website, company
 
 $('.needs-validation').submit(function (event) {
-    /**event.preventDefault()
+    event.preventDefault()
 
     if ($(this)[0].checkValidity() === false) {
         checkCaptchaValidity()
@@ -97,10 +97,10 @@ $('.needs-validation').submit(function (event) {
         telephone = $("#telephone").val()
         company = $("#company").val()
 
-        addClient() */
+        addClient()
         
         createEstimation()
-    //}
+    }
     $(this)[0].classList.add('was-validated');
 })
 
