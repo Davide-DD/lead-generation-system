@@ -19,6 +19,8 @@
   }  
 }
 
+
+
 .my-paragraph-first {
   border-radius: 3rem;
   background: #000000;
@@ -32,6 +34,18 @@
 .full-placeholder-first {
   visibility: hidden
 }
+
+@media (max-width: 767px) {
+  .full-placeholder-first {
+    display: none;
+  }  
+  
+  .margin-modifier-magma {
+    margin-top: 0px !important;
+	padding-top: 0px !important;
+  }
+}
+
 .half-placeholder-first {
   visibility: hidden
 }
