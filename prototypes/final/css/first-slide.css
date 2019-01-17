@@ -37,6 +37,50 @@
     margin-top: 0px !important;
 	padding-top: 0px !important;
   }
+  
+  
+  #aci-features-mobile {
+	display: block;
+  }
+  
+  #aci-features-desktop {
+	display: none;
+  }
+  
+  #magma-features-mobile {
+	display: block;
+  }
+  
+  #magma-features-desktop {
+	display: none;
+  }
+  .bg-aci-first {
+	padding-bottom: 0px !important;  
+  }
+  
+  .bg-magma-first {
+	padding-top: 0px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #aci-features-desktop {
+	display: block;
+  }
+  
+  #aci-features-mobile {
+	display: none;
+  }
+  
+  #magma-features-desktop {
+	display: block;
+  }
+  
+  #magma-features-mobile {
+	display: none;
+  }
+  
+  
 }
 .plan-image-first {
   height: 60px;
@@ -57,4 +101,9 @@
 }
 .service-button-first:hover {
   background-color: #ffff66;
+}
+
+.features:hover {
+  background-color: #ffff66;
+  color: black !important;
 }
