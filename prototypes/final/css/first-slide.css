@@ -6,14 +6,14 @@
 }
 
 @media(min-width:1200px){
-  .my-paragraph-first {
+  .my-paragraph {
     margin-right: 8rem;
     margin-left: 8rem
   }  
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .my-paragraph-first {
+  .my-paragraph {
     margin-right: 4rem;
     margin-left: 4rem
   }  
@@ -26,17 +26,17 @@
   font-size: 0.9rem;
   line-height: 1.2rem
 }
-.full-placeholder-first::before {
-  content: "Placeholder";
+.placeholder-first::before {
+  content: "Placeholder"
 }
-.full-placeholder-first {
-  visibility: hidden
-}
-.half-placeholder-first {
-  visibility: hidden
+.placeholder-first {
+  visibility: hidden;
 }
 .plan-image-first {
   height: 60px;
+}
+.advice {
+  height: 2rem;
 }
 .service-button-first{
   font-size: 1.0rem;

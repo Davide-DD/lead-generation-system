@@ -5,7 +5,7 @@
  */
 var serviceSelectedId = ""
 $(".service-button-first").click(function (event) {
-    serviceSelectedId = $(this)[0].innerText
+    serviceSelectedId = $(this)[0].innerText.substring(0, $(this)[0].innerText.indexOf(" "))
     $(this).focus()
 });
 var aciInfo = "", magmaInfo = ""
@@ -59,7 +59,7 @@ $("#confirmSelectedServices").click(function (event) {
     var separation = $('input[type="checkbox"]:checked').length / 2
     var counter = 0;
     $('input[type="checkbox"]:checked').each(function() {
-        counter <= separation ? 
+        counter < separation ? 
         firstSelectedServicesIds += $(this)[0].value.substring(0, $(this)[0].value.indexOf("-") - 1) + "\n" :
         secondSelectedServicesIds += $(this)[0].value.substring(0, $(this)[0].value.indexOf("-") - 1) + "\n";
         totalSelectedServicesPrice += parseFloat($(this)[0].value.substring($(this)[0].value.indexOf("-") + 2))
@@ -80,7 +80,7 @@ $("#confirmSelectedServices").click(function (event) {
 var name, surname, email, telephone, website, company
 
 $('.needs-validation').submit(function (event) {
-    event.preventDefault()
+    /**event.preventDefault()
 
     if ($(this)[0].checkValidity() === false) {
         checkCaptchaValidity()
@@ -97,10 +97,10 @@ $('.needs-validation').submit(function (event) {
         telephone = $("#telephone").val()
         company = $("#company").val()
 
-        addClient()
+        addClient() */
         
         createEstimation()
-    }
+    //}
     $(this)[0].classList.add('was-validated');
 })
 
