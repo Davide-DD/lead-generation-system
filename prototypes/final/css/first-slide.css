@@ -18,7 +18,6 @@
     margin-left: 4rem
   }  
 }
-
 .my-paragraph-first {
   border-radius: 3rem;
   background: #000000;
@@ -31,6 +30,13 @@
 }
 .placeholder-first {
   visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .margin-modifier-magma {
+    margin-top: 0px !important;
+	padding-top: 0px !important;
+  }
 }
 .plan-image-first {
   height: 60px;
